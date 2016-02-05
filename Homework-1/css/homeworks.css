@@ -1,0 +1,61 @@
+/*Не вижу особого смысла воспроизводить серый фон с черной полосой внизу,*/
+/*но на всякий случай сделал и его, чтобы продемонстрировать*/
+/*внимание к деталям и клиентоориентированность :D*/
+body{
+  background: #eeeeee;
+  width: 1440px;
+  height: 802px;
+  border-bottom: 4px solid black;
+  border-radius: 6px;
+}
+
+/*Основной блок, включающий в себя все остальные*/
+.letter{
+  font: normal 13pt/13pt times;
+  width: 512px;
+  height: 751px;
+  margin-left: 33%;
+  margin-right: 33%;
+  background-color: white;
+  border: 1px solid lightgrey;
+  box-shadow: lightgrey 0px 0px 2px 1px;
+}
+
+/*Блоки с отбивкой подчеркиванием*/
+.underlined_block{
+  border-bottom: 1px solid black;
+  margin: 5px 50px 25px 50px;
+}
+
+/*Последний блок без подчеркивания и с сокращенным нижним отступом*/
+.simple_block{
+  margin: 5px 50px 5px 50px;
+}
+
+/*Отступы для абзацев текста*/
+p{
+  margin: 10px 10px 10px 10px;
+}
+
+/*Оверрайд заголовочного стиля для подгонки под макет*/
+h1{
+  font: bold 18pt/18pt times;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/*Это почти не заметно, но в макете левый отступ списка примерно*/
+/*на 6 пикселей левее, чем стандартный, поэтому тоже фиксим это*/
+ul{
+  margin-left: -6px;
+}
+
+/*Подгоняем отступы элементов списка под макет*/
+li{
+  margin-top: 8px;
+}
+
+/*Ресайзим фотку по ширине*/
+img{
+  width: 140px;
+}
