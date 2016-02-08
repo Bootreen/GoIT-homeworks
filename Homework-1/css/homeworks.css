@@ -1,3 +1,5 @@
+
+
 /*Не вижу особого смысла воспроизводить серый фон с черной полосой внизу,*/
 /*но на всякий случай сделал и его, чтобы продемонстрировать*/
 /*внимание к деталям и клиентоориентированность :D*/
@@ -14,11 +16,10 @@ body{
   font: normal 13pt/13pt times;
   width: 512px;
   height: 751px;
-  margin-left: 33%;
-  margin-right: 33%;
+  margin: auto;
   background-color: white;
   border: 1px solid lightgrey;
-  box-shadow: lightgrey 0px 0px 2px 1px;
+  box-shadow: lightgrey 0 0 2px 1px;
 }
 
 /*Блоки с отбивкой подчеркиванием*/
@@ -44,8 +45,8 @@ p{
 
 /*Центрируем абзац с фото*/
 .photo{
-  margin-left: 33%;
-  margin-right: 33%;
+  margin: auto;
+  text-align: center;
 }
 
 /*Ресайзим фотку по ширине*/
