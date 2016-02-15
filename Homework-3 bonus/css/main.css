@@ -68,7 +68,7 @@ body{
 header{
   padding: 98px 0 0 786px;
 
-  letter-spacing: -0.02em;
+  font: 7pt/10pt Tahoma;
 }
 
 /*Небольшой тюнинг первой строчки контактов*/
