@@ -54,7 +54,7 @@
 /*Направление следования элементов: в линию, слева направо.*/
 .menu_h{
   flex-direction: row;
-  
+
   width: 964px;
   height: 40px;
 }
@@ -121,6 +121,22 @@
   background: linear-gradient(to top, #2e2e2e, #4a4a4a);
 }
 
+.menu_top li:hover{
+  box-sizing: border-box;
+  border-right: 1px solid #838383;
+  border-left: 1px solid #838383;
+
+  background: black;
+}
+
+.menu_bottom li:hover{
+  background: #838383;
+}
+
+.menu_left li:hover{
+  background: #e1e1e1;
+}
+
 .menu_bottom a{
   display: block;
 
@@ -158,6 +174,7 @@
 
 .menu_left li:last-child{
   border-bottom: none;
+  height: 40px;
 }
 
 .menu_left a{
