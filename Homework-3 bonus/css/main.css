@@ -1,0 +1,130 @@
+/*Задаем белый шрифт всему документу и отдельно ссылкам,
+т.к. reset.css зануляет их в синие с подчеркиванием*/
+html, .email{
+  text-decoration: none;
+
+  color: white;
+
+  font: 7pt/10pt Tahoma;
+}
+
+/*Занимаем всю доступную высоту в окне браузера и центрируем фон*/
+html{
+  height: 100%;
+
+  background-color: black;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*Ограничиваем размер контейнера для страницы*/
+body{
+  width: 960px;
+  height: 880px;
+  margin: auto;
+}
+
+/*Лого составное: название, пальма и слоган; группируем все в один блок*/
+.logo_area{
+  float: left;
+
+  width: 266px;
+  height: 148px;
+  margin: 4px 0 0 70px;
+}
+
+/*Убираем пальму на задний план и делаем ее полупрозрачной, как в макете*/
+.palm{
+  position: absolute;
+  z-index: 0;
+
+  display: block;
+
+  padding-left: 142px;
+
+  opacity: 0.15;
+}
+
+/*Само лого перекрывает пальму, ставим его на передний план*/
+.logo{
+  position: relative;
+  z-index: 1;
+
+  padding-top: 76px;
+}
+
+/*Слоган по центру и крупнее обычного текста*/
+.motto{
+  margin-top: 5px;
+
+  text-align: center;
+
+  font: 8.5pt/9pt Tahoma;
+}
+
+/*Контакты пихаем в заголовок и загоняем паддингами вправо от лого,
+плюс там межбуквенные интервалы немного сжаты*/
+header{
+  padding: 98px 0 0 786px;
+
+  letter-spacing: -0.04em;
+}
+
+/*Небольшой тюнинг первой строчки контактов*/
+.head{
+  margin-bottom: 5px;
+
+  font: 8pt/9pt Tahoma;
+}
+
+/*Основной контейнер с фотками, их будет две штуки, снова используем
+flex всемогущий, только в этот раз умнее делаем спейсинги между элементами
+через justify-content (спасибо за ссылку с лягушками! :)*/
+.container{
+  display: flex;
+  flex-direction: row;
+
+  width: 830px;
+  margin: 14px auto 45px;
+
+  justify-content: space-around;
+}
+
+/*Блок с фоткой и подписями*/
+.country{
+  width: 270px;
+}
+
+/*Фотку и рамку сделал отдельно, потому что так красивее и правильнее, плюс
+можно потом заменить рамку, не переверстывая страницу, плюс попрактиковался
+с многослойными страницами*/
+.country_photo{
+  position: absolute;
+  z-index: 2;
+
+  margin: 5px;
+}
+
+.frame{
+  position: relative;
+  z-index: 3;
+}
+
+.country_name{
+  text-align: center;
+
+  font: 11.5pt/12pt Tahoma;
+
+  margin-top: -2px;
+}
+
+/*Центрируем футер и задаем правильный отступ, он не совсем по центру,
+правее на 14 пикселей, плюс спейсинг больше стандартного*/
+footer{
+  margin: 186px 0 0 14px;
+
+  text-align: center;
+
+  letter-spacing: 0.04em;
+}
