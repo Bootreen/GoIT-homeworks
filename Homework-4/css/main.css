@@ -130,13 +130,14 @@ html, body{
 
   width: 100%;
   height: 28px;
+
   /*Я не знаю, зачем в макете у меню верхний отступ в 1 пиксель сверху,
   выглядит как ошибка, сделал без него, если понадобится этот отступ,
   достаточно закомментировать следующую строку*/
   margin: -1px 0;
 
   border-bottom: 1px solid #000000;
-  background: linear-gradient(to bottom, #373737, #303030)
+  background: linear-gradient(to bottom, #373737, #303030);
   box-shadow: 0 0 5px;
 }
 
@@ -148,6 +149,7 @@ html, body{
   width: 93%;
   height: 100%;
   margin: 0 auto;
+
   /*Центровочка пунктов меню*/
   padding-top: 6px;
 
