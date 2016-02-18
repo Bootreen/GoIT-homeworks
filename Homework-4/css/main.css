@@ -202,28 +202,40 @@ ul.menu > li:hover > ul.dropmenu{
   display: flex;
 }
 
-/*Панели одинаковые, кроме направления флоата, группируем их стили*/
-.panel{
+/*Описываем контейнер для колонок*/
+.main_block{
   position: relative;
   z-index: 1;
 
+  height: 548px;
+
+  display: flex;
+  flex-direction: row;
+
+  /*Это для обрезки контента, который не помещается в колонки*/
+  overflow: hidden;
+}
+
+.content{
+  width: 580px;
+  padding: 20px 15px;
+
+  /*Заранее прописываем шрифт для контента центральной колонки, на случай,
+  если там понадобится что-нибудь написать*/
+  font: normal 12pt/12pt tahoma;
+}
+
+/*Боковые панели одинаковые, группируем их стили*/
+.panel{
   box-sizing: border-box;
   width: 210px;
-  height: 546px;
+  height: 100%;
   margin: 1px 0 0 0;
   padding: 0 15px;
 
   border-right: 1px solid #c7cacf;
   border-left: 1px solid #c7cacf;
   background-color: #edeef0;
-}
-
-.info{
-  float: left;
-}
-
-.news{
-  float: right;
 }
 
 .panel > h1{
