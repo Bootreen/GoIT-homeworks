@@ -1,0 +1,80 @@
+body{
+  background-color: lightgrey;
+}
+
+/*Просто отступы от фонаря, чтобы картина не прилипала к краям окна*/
+.wrapper{
+  width: 50%;
+  margin: 5%;
+}
+
+td{
+  width: 50px;
+  height: 50px;
+  border: 8px solid black;
+}
+
+.row1 > td{
+  height: 47px;
+  border-top: none;
+}
+
+.row2 > td, .row3 > td{
+  height: 127px;
+}
+
+.row4 > td, .row5 > td{
+  height: 60px;
+}
+
+.row6 > td, .row7 > td{
+  height: 30px;
+}
+
+.row7 > td, .row5 .col1, .row6 .col2{
+  border-bottom: none;
+}
+
+.last{
+  border-right: none;
+}
+
+.col1{
+  width: 47px;
+  border-left: none;
+}
+
+.col2, .col3{
+  width: 60px;
+}
+
+.col4{
+  width: 129px;
+}
+
+.col5{
+  width: 79px;
+}
+
+.col6{
+  width: 76px;
+}
+
+.cell_white{
+  background-color: white;
+}
+
+.cell_yellow{
+  background-color: #fff557;
+}
+.cell_red{
+  background-color: #ff5a2e;
+}
+
+.cell_blue{
+  background-color: #014388;
+}
+
+.cell_darkgrey{
+  background-color: rgb(30, 30, 30);
+}
