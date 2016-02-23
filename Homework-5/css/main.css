@@ -4,7 +4,7 @@ body{
   background: #355040;
 
   /*Дефолтный шрифт для документа*/
-  font: normal 10.5pt/11pt tahoma, arial;
+  font: normal 10.5pt/11pt Helvetica Neue Cyr, Tahoma;
 }
 
 /*Контейнер на 36 пикселей шире фона, это резерв под меню, поэтому
@@ -38,7 +38,7 @@ body{
   float: left;
 
   width: 387px;
-  margin-left: 459px;
+  margin-left: 458px;
 
   justify-content: space-between;
 }
@@ -86,8 +86,8 @@ body{
 
 /*У флажка свой собственный паддинг и марджины*/
 .right > li:first-child{
-  margin-right: -3px;
-  margin-left: 10px;
+  margin-left: 13px;
+
   padding-top: 6px;
 }
 
@@ -102,7 +102,7 @@ body{
 
   box-sizing: border-box;
   margin-left: 6px;
-  padding: 11px 15px 0;
+  padding: 11px 12px 0;
 
   border-right: #4299d2;
   border-bottom: #4299d2;
@@ -116,6 +116,12 @@ body{
   background: linear-gradient(to bottom, #51b1dc, #2e7ac4);
 }
 
+.reg_wrapper{
+  width: 560px;
+  height: 613px;
+  margin: 207px auto;
+}
+
 /*Задаем полупрозрачность для регистрационной формы и ее шапки*/
 .reg_title, .registration{
   color: white;
@@ -124,20 +130,21 @@ body{
 
 .reg_title{
   height: 62px;
-  margin: 213px 302px 2px 353px;
+  /*margin: 213px 302px 2px 353px;*/
+  margin-bottom: 2px;
 
   text-align: center;
 }
 
 .reg_title p{
-  padding-top: 18px;
+  padding-top: 21px;
 
-  font: 18pt/18pt tahoma, arial;
+  font: 18pt/18pt Helvetica Neue Cyr, Tahoma;
 }
 
 .registration{
   height: 549px;
-  margin: 0 302px 0 353px;
+  /*margin: 0 302px 0 353px;*/
 }
 
 .registration ul{
@@ -194,7 +201,7 @@ body{
   background: linear-gradient(to bottom, #111010, #141414);
 
   /*Шрифт пришлось прописывать принудительно, reset.css его не занулил*/
-  font: normal 10.5pt/11pt tahoma, arial;
+  font: normal 10.5pt/11pt Helvetica Neue Cyr, Tahoma;
 }
 
 /*Стиль для активных полей ввода*/
@@ -208,7 +215,7 @@ body{
 /*Оказалось, что по дефолту у чекбокса марджины 3px, а по макету они лишние,
 поэтому занулил и отдельно прописал нижний отступ*/
 input#notifications{
-  margin: 0 0 22px 0;
+  margin: 0 0 27px 0;
 }
 
 .main label{
@@ -227,5 +234,5 @@ input#notifications{
 
   opacity: 0.6;
 
-  font: normal 8pt/12pt tahoma, arial;
+  font: normal 8pt/12pt Helvetica Neue Cyr, Tahoma;
 }
