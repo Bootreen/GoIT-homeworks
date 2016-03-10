@@ -1,0 +1,10 @@
+body{
+  /*background-color: grey;*/
+}
+
+.test{
+  margin: 100px;
+  font-family: CustomIcons;
+  color: red;
+  text-shadow: 0 0 2px black;
+}

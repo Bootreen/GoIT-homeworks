@@ -1,0 +1,43 @@
+@font-face{
+    font-family: "LeagueGothicRegular";
+    src: url("../fonts/LeagueGothicRegular/LeagueGothicRegular.eot");
+    src: url("../fonts/LeagueGothicRegular/LeagueGothicRegular.eot?#iefix")format("embedded-opentype"),
+         url("../fonts/LeagueGothicRegular/LeagueGothicRegular.woff") format("woff"),
+         url("../fonts/LeagueGothicRegular/LeagueGothicRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: 'OpenSansLight';
+    src: url('../fonts/OpenSans/opensans-light-webfont.eot');
+    src: url('../fonts/OpenSans/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans/opensans-light-webfont.woff2') format('woff2'),
+         url('../fonts/OpenSans/opensans-light-webfont.woff') format('woff'),
+         url('../fonts/OpenSans/opensans-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'OpenSansExtraBold';
+    src: url('../fonts/OpenSans/opensans-extrabold-webfont.eot');
+    src: url('../fonts/OpenSans/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans/opensans-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/OpenSans/opensans-extrabold-webfont.woff') format('woff'),
+         url('../fonts/OpenSans/opensans-extrabold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'CustomIcons';
+    src: url('../fonts/CustomIcons/icons.eot?40036945');
+    src: url('../fonts/CustomIcons/icons.eot?40036945#iefix') format('embedded-opentype'),
+         url('../fonts/CustomIcons/icons.woff2?40036945') format('woff2'),
+         url('../fonts/CustomIcons/icons.woff?40036945') format('woff'),
+         url('../fonts/CustomIcons/icons.ttf?40036945') format('truetype'),
+         url('../fonts/CustomIcons/icons.svg?40036945#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
