@@ -1,10 +1,25 @@
-body{
-  /*background-color: grey;*/
-}
-
-.test{
+.test {
   margin: 100px;
   font-family: CustomIcons;
   color: red;
   text-shadow: 0 0 2px black;
+}
+
+/*Заглушки для адаптивных стилей*/
+@media (max-width: 320px) {
+  .box{
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .box{
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .box{
+    margin: 0;
+  }
 }

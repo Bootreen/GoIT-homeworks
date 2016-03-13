@@ -5,9 +5,94 @@
   <title>Pingbuller</title>
   <link rel="stylesheet" href="css/reset.css" charset="utf-8">
   <link rel="stylesheet" href="css/fonts.css" charset="utf-8">
+  <!-- Глифы кастомного иконочного шрифта CustomIcons:
+  &#xe800; - стрелка влево
+  &#xe801; - стрелка вправо
+  &#xe802; - гаечный ключ
+  &#xe803; - комментарий
+  &#xe804; - ноты -->
   <link rel="stylesheet" href="css/style.css" charset="utf-8">
 </head>
-<body>
-  <div class="test">&#xe800; &#xe801; &#xe802; &#xe803; &#xe804;</div>
+<body class="backplate">
+
+  <header class="custom-header">
+    <div class="logo">
+      <span class="logo__text">pingbull</span>
+      <span class="logo__text logo__text_violet">er</span>
+    </div>
+    <menu class="header-menu">
+      <ul class="header-menu__list">
+        <li class="header_menu__item"><a class="header_menu__item-link" href="#">home</a></li>
+        <li class="header_menu__item"><a class="header_menu__item-link" href="#">about</a></li>
+        <li class="header_menu__item"><a class="header_menu__item-link" href="#">blog</a></li>
+        <li class="header_menu__item"><a class="header_menu__item-link" href="#">products</a></li>
+        <li class="header_menu__item"><a class="header_menu__item-link" href="#">lorem ipsum</a></li>
+        <li class="header_menu__item"><a class="header_menu__item-link" href="#">dolor sit amet</a></li>
+      </ul>
+    </menu>
+  </header>
+
+  <section class="main-slider">
+    <div class="main-slider__nav main-slider__nav_left">&#xe800;</div>
+    <div class="main-slider__wrapper">
+      <article class="main-slider-article">
+        <h1 class="main-slider-article__header"></h1>
+        <h2 class="main-slider-article__sub-header"></h2>
+        <p class="main-slider-article__text">
+
+        </p>
+      </article>
+    </div>
+    <div class="main-slider__image">
+      <img class="main-slider__image-src" src="img/phone.jpg" alt="">
+    </div>
+    <div class="main-slider__nav main-slider__nav_right">&#xe801;</div>
+    <div class="main-slider__radio-block">
+      <div class="main-slider__radio-item"></div>
+      <div class="main-slider__radio-item main-slider__radio-item_active"></div>
+      <div class="main-slider__radio-item"></div>
+      <div class="main-slider__radio-item"></div>
+    </div>
+  </section>
+
+  <section class="central">
+    <article class="central-article">
+      <div class="central-article__icon">&#xe802;</div>
+      <h1 class="central-article__header"></h1>
+      <p class="central-article__text">
+
+      </p>
+      <span class="central-article__expand">read more</span>
+    </article>
+    <article class="central-article">
+      <div class="central-article__icon">&#xe803;</div>
+      <h1 class="central-article__header"></h1>
+      <p class="central-article__text">
+
+      </p>
+      <span class="central-article__expand">read more</span>
+    </article>
+    <article class="central-article">
+      <div class="central-article__icon">&#xe804;</div>
+      <h1 class="central-article__header"></h1>
+      <p class="central-article__text">
+
+      </p>
+      <span class="central-article__expand">read more</span>
+    </article>
+  </section>
+
+  <section class="main">
+
+  </section>
+
+  <section class="pre-footer">
+
+  </section>
+
+  <footer class="custom-footer">
+
+  </footer>
+
 </body>
 </html>
