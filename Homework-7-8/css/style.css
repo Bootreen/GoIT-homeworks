@@ -1,25 +1,384 @@
-.test {
-  margin: 100px;
-  font-family: CustomIcons;
-  color: red;
-  text-shadow: 0 0 2px black;
+html {
+  font: normal 14px/14px OpenSansLight;
+  background-color: #f9f9f9;
+}
+
+.backplate {
+  margin: 0 auto;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.custom-header {
+  width: 960px;
+  height: 278px;
+  margin: 0 auto;
+}
+
+.logo {
+  float: left;
+  margin: 67px 0 0 -2px;
+}
+
+.logo__text {
+  font: normal 48px/48px LeagueGothicRegular;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+}
+
+.logo__text_violet {
+  /*У span даже после reset.css остается какой-то левый марджин, компенсируем его*/
+  margin-left: -3px;
+  /*Костылик для браузеров без поддержки webkit*/
+  color: #322539;
+  /*Для нормальных браузеров*/
+  background: -webkit-linear-gradient(#745083, #322539);
+  -webkit-background-clip: text;
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-menu {
+  float: right;
+  width: 640px;
+  margin-top: 72px;
+}
+
+.header-menu__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-menu__item {
+  display: block;
+  padding: 2px 6px;
+}
+
+.header-menu__item-link {
+  font: normal 24px/24px LeagueGothicRegular;
+  text-decoration: none;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+}
+
+.header-menu__item:hover {
+  /*Пордчеркивание при наведении курсора*/
+  border-bottom: 2px solid #edbfff;
+}
+
+.main-slider {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  background-color: rgba(0, 0, 0, .3);
+  justify-content: space-between;
+}
+
+.main-slider__wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.main-slider__nav {
+  position: relative;
+  padding: 183px 15px;
+}
+
+.main-slider__nav-link {
+  font: normal 34px/34px CustomIcons;
+  text-decoration: none;
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.main-slider-article {
+  float: left;
+  width: 520px;
+  margin: 79px 0 0 -2px;
+}
+
+.main-slider-article__header {
+  font: normal 60px/60px LeagueGothicRegular;
+  letter-spacing: -.017em;
+  text-transform: capitalize;
+  color: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+}
+
+.main-slider-article__sub-header {
+  font: normal 31px/30px LeagueGothicRegular;
+  letter-spacing: -.002em;
+  text-transform: uppercase;
+  color: #edbfff;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+}
+
+.main-slider-article__text {
+  font: normal 18px/24px OpenSansLight;
+  margin-top: 6px;
+  letter-spacing: -.003em;
+  color: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+}
+
+.main-slider__image {
+  margin: -17px 0 0 614px;
+}
+
+.main-slider__radio-block {
+  display: flex;
+  flex-direction: row;
+  width: 82px;
+  margin: 74px 0 0 710px;
+  justify-content: space-between;
+}
+
+.main-slider__radio-item {
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.main-slider__radio-item_active {
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border: 3px solid black;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.central {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  height: 343px;
+  margin-top: 168px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid white;
+  background: -webkit-linear-gradient(#745083, #322539);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  justify-content: center;
+}
+
+.central-article {
+  width: 275px;
+  margin: 78px 24px 0 39px;
+}
+
+.central-article__icon {
+  font: normal 24px/24px CustomIcons;
+  float: left;
+  margin-top: 8px;
+  text-decoration: none;
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.central-article__header {
+  font: normal 28px/28px LeagueGothicRegular;
+  margin-left: 52px;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+}
+
+.central-article__text {
+  font: normal 16px/24px OpenSansLight;
+  display: block;
+  overflow-y: hidden;
+  height: 120px;
+  margin: 8px 0 0 50px;
+  letter-spacing: -.008em;
+  color: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+}
+
+.central-article__expand {
+  margin: 20px 0 0 214px;
+}
+
+.central-article__expand-link {
+  font: normal 19px/19px LeagueGothicRegular;
+  text-decoration: none;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+}
+
+.central-article__expand-link:hover {
+  text-shadow: 0 0 5px white;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 387px;
+  margin-top: 98px;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: #f9f9f9;
+  justify-content: center;
+}
+
+.text-slider {
+  width: 450px;
+  height: 320px;
+  margin-left: 60px;
+  background-image: url(../img/text-slider-bg.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.text-slider-article {
+  width: 410px;
+}
+
+.text-slider-article__avatar {
+  float: left;
+  margin: -12px 0 0 -22px;
+}
+
+.text-slider-article__header {
+  font: normal 30px/30px LeagueGothicRegular;
+  margin: 30px 0 0 41px;
+  letter-spacing: -.008em;
+  text-transform: uppercase;
+  color: #454545;
+}
+
+.text-slider-article__header_pink {
+  color: #edbfff;
+}
+
+.text-slider-article__text {
+  font: normal 16px/24px OpenSansLight;
+  display: block;
+  overflow-y: hidden;
+  width: 350px;
+  height: 170px;
+  margin: 8px 0 0 42px;
+  letter-spacing: -.005em;
+  color: #454545;
+}
+
+.text-slider__radio-block {
+  display: flex;
+  flex-direction: row;
+  width: 82px;
+  margin: 58px 0 0 174px;
+  justify-content: space-between;
+}
+
+.text-slider__radio-item {
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+}
+
+.text-slider__radio-item_active {
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: #454545;
+}
+
+.updates-block {
+  width: 510px;
+  height: 320px;
+  margin-left: 20px;
+}
+
+.updates-block__header {
+  font: normal 30px/30px LeagueGothicRegular;
+  margin: 30px 0 15px 18px;
+  letter-spacing: -.008em;
+  text-transform: uppercase;
+  color: #454545;
+}
+
+.update {
+  padding-left: 19px;
+}
+
+.update__img {
+  float: left;
+  margin-right: 17px;
+}
+
+.update__header {
+  font: normal 16px/18px OpenSansExtraBold;
+  padding-top: 3px;
+  color: #454545;
+}
+
+.update__text {
+  font: normal 16px/24px OpenSansLight;
+  display: block;
+  overflow-y: hidden;
+  margin-bottom: 18px;
+  padding-top: 3px;
+  letter-spacing: -.008em;
+  color: #454545;
+}
+
+.updates-block__expand {
+  margin: 23px 0 0 364px;
+}
+
+.updates-block__expand-link {
+  font: normal 19px/19px LeagueGothicRegular;
+  text-decoration: none;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  color: #454545;
+}
+
+.updates-block__expand-link:hover {
+  text-shadow: 0 0 3px #454545;
+}
+
+.sponsors {
+  margin: 0 0 0 0;
+}
+
+.sponsors__logo {
+  width: 104px;
+  height: 64px;
+  background-image: url(../img/sponsors.png);
 }
 
 /*Заглушки для адаптивных стилей*/
+
 @media (max-width: 320px) {
-  .box{
+  .box {
     margin: 0;
   }
 }
 
 @media (max-width: 480px) {
-  .box{
+  .box {
     margin: 0;
   }
 }
 
 @media (max-width: 768px) {
-  .box{
+  .box {
     margin: 0;
   }
 }

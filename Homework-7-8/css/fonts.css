@@ -12,7 +12,6 @@
     font-family: 'OpenSansLight';
     src: url('../fonts/OpenSans/opensans-light-webfont.eot');
     src: url('../fonts/OpenSans/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans/opensans-light-webfont.woff2') format('woff2'),
          url('../fonts/OpenSans/opensans-light-webfont.woff') format('woff'),
          url('../fonts/OpenSans/opensans-light-webfont.ttf') format('truetype');
     font-weight: normal;
@@ -23,7 +22,6 @@
     font-family: 'OpenSansExtraBold';
     src: url('../fonts/OpenSans/opensans-extrabold-webfont.eot');
     src: url('../fonts/OpenSans/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans/opensans-extrabold-webfont.woff2') format('woff2'),
          url('../fonts/OpenSans/opensans-extrabold-webfont.woff') format('woff'),
          url('../fonts/OpenSans/opensans-extrabold-webfont.ttf') format('truetype');
     font-weight: normal;
