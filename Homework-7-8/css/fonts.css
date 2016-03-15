@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
     font-family: "LeagueGothicRegular";
     src: url("../fonts/LeagueGothicRegular/LeagueGothicRegular.eot");
     src: url("../fonts/LeagueGothicRegular/LeagueGothicRegular.eot?#iefix")format("embedded-opentype"),
@@ -8,7 +8,7 @@
     font-weight: normal;
 }
 
-@font-face{
+@font-face {
     font-family: 'OpenSansLight';
     src: url('../fonts/OpenSans/opensans-light-webfont.eot');
     src: url('../fonts/OpenSans/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
@@ -18,7 +18,7 @@
     font-style: normal;
 }
 
-@font-face{
+@font-face {
     font-family: 'OpenSansExtraBold';
     src: url('../fonts/OpenSans/opensans-extrabold-webfont.eot');
     src: url('../fonts/OpenSans/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
@@ -28,7 +28,19 @@
     font-style: normal;
 }
 
-@font-face{
+@font-face {
+	  font-family: 'Georgia';
+	  src: url('../fonts/Georgia/Georgia.eot');
+	  src: url('../fonts/Georgia/Georgia.eot?#iefix') format('embedded-opentype'),
+	  	   url('../fonts/Georgia/Georgia.woff2') format('woff2'),
+	  	   url('../fonts/Georgia/Georgia.woff') format('woff'),
+	  	   url('../fonts/Georgia/Georgia.ttf') format('truetype');
+	  font-weight: normal;
+	  font-style: italic;
+}
+
+
+@font-face {
     font-family: 'CustomIcons';
     src: url('../fonts/CustomIcons/icons.eot?40036945');
     src: url('../fonts/CustomIcons/icons.eot?40036945#iefix') format('embedded-opentype'),
