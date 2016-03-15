@@ -155,6 +155,11 @@ html {
   margin: -17px 0 0 614px;
 }
 
+.main-slider__image-src {
+  width: 274px;
+  height: 434px;
+}
+
 .main-slider__radio-block {
   display: flex;
   flex-direction: row;
