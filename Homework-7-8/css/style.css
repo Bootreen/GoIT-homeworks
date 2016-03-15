@@ -1,7 +1,5 @@
 html {
   background-color: #f9f9f9;
-
-  font: normal 14px/14px OpenSansLight;
 }
 
 .backplate {
@@ -40,7 +38,7 @@ html {
   /*Костылик для браузеров без поддержки webkit*/
 
   color: #322539;
-  /*Для нормальных браузеров*/
+  /*Для нормальных браузеров градиентный шрифт*/
   background: -webkit-linear-gradient(#745083, #322539);
   -webkit-background-clip: text;
   text-shadow: none;
