@@ -47,10 +47,12 @@ html {
 }
 
 .header-menu {
+  position: relative;
   float: right;
 
   width: 640px;
   margin-top: 72px;
+  z-index: 5;
 }
 
 .header-menu__list {
@@ -62,6 +64,7 @@ html {
 
 .header-menu__item {
   display: block;
+  box-sizing: border-box;
 
   padding: 2px 6px;
 }
@@ -669,10 +672,6 @@ html {
     padding: 67px 0 0 18px;
   }
 
-  .logo__text_violet {
-    margin-left: 0;
-  }
-
   .header-menu {
     float: none;
 
@@ -898,13 +897,319 @@ html {
 
 }
 
-@media (max-width: 480px) {
-  .box {
-    margin: 0;
+@media (max-width: 768px) {
+
+  .backplate {
+    width: 768px;
   }
+
+  .custom-header {
+    width: 480px;
+    height: 203px;
+  }
+
+  .logo {
+    padding-left: 162px;
+  }
+
+  .header-menu {
+    box-sizing: border-box;
+    margin: 16px auto 0;
+    overflow: hidden;
+    width: 44px;
+    height: 42px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    /*box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    background-color: rgba(54, 41, 62, 0.9);*/
+    border-radius: 12px;
+  }
+
+  .header-menu:hover {
+    box-sizing: border-box;
+    margin: 16px auto 0;
+    overflow-y: hidden;
+    width: 246px;
+    height: 258px;
+    border: 1px solid #051116;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    background-color: rgba(54, 41, 62, 0.9);
+    border-radius: 12px;
+    transition: 0.5s;
+  }
+
+  .header-menu__list {
+    flex-direction: column;
+    /*height: 100%;*/
+  }
+
+  .header-menu__item {
+    /*box-sizing: border-box;*/
+    padding: 6px 0;
+    display: block;
+    /*width: 244px;*/
+    height: 43px;
+    align-content: center;
+    border-top: 1px solid rgba(101, 83, 108, 0.9);
+    border-bottom: 1px solid rgba(73, 60, 80, 0.9);
+  }
+
+  .header-menu__item:hover {
+    border-top: 1px solid rgba(101, 83, 108, 0.9);
+    border-bottom: 1px solid rgba(73, 60, 80, 0.9);
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.7s;
+  }
+
+  .header-menu__item-link {
+    display: block;
+    height: 100%;
+    margin: 5px auto;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    text-align: center;
+  }
+
+  .header-menu__item-link:hover {
+    border-bottom: 2px solid #edbfff;
+    transition: 0.7s;
+  }
+
+  .header-menu__item_menu-start, .header-menu__item_menu-start:hover {
+    border-top: 1px solid rgba(0, 0, 0, 0);
+  }
+
+  .header-menu__item_menu-end, .header-menu__item_menu-end:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+  }
+
+  .header-menu__item-link_menu-end, .header-menu__item-link_menu-end:hover {
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+  }
+
+  /*.header-menu__item_always-visible {
+    display: block;
+  }*/
+
+  .main-slider {
+    justify-content: center;
+  }
+
+  .main-slider__wrapper {
+    width: 724px;
+    margin: 0 0 0 0;
+  }
+
+  .main-slider__nav {
+    padding: 183px 0;
+    margin: 0 0 0 0;
+  }
+
+  .main-slider-article {
+    float: left;
+
+    width: 275px;
+    margin: 100px 0 0 21px;
+  }
+
+  .main-slider-article__header {
+    letter-spacing: -.015em;
+
+    font: normal 48px/48px LeagueGothicRegular;
+  }
+
+  .main-slider-article__sub-header {
+    letter-spacing: -.011em;
+
+    font: normal 24px/24px LeagueGothicRegular;
+    width: 270px;
+    overflow: hidden;
+    margin-top: 6px;
+    white-space: nowrap;
+  }
+
+  .main-slider-article__text {
+    margin-top: 7px;
+
+    font: normal 16px/26px OpenSansLight;
+    height: 105px;
+    overflow-y: hidden;
+  }
+
+  .main-slider__image {
+    margin: -23px 0 0 425px;
+  }
+
+  .main-slider__radio-block {
+    margin: 24px 0 0 521px;
+  }
+
+  .central {
+    margin-top: 154px;
+  }
+
+  .central-article {
+    width: 205px;
+    margin: 78px 0 0 0;
+    padding: 0 19px 0 33px;
+  }
+
+  .central-article__icon {
+    margin-top: 4px;
+  }
+
+  .central-article__header {
+    margin-left: 50px;
+
+    letter-spacing: -.01em;
+
+    font: normal 24px/24px LeagueGothicRegular;
+  }
+
+  .central-article__text {
+    height: 140px;
+    margin-top: 2px;
+  }
+
+  .central-article__expand {
+    margin: 12px 0 0 140px;
+  }
+
+  .main {
+    margin-top: 100px;
+  }
+
+  .text-slider {
+    width: 314px;
+    height: 272px;
+    margin-left: 139px;
+
+    background-image: none;
+    background-color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .05);
+  }
+
+  .text-slider-article {
+    width: 310px;
+  }
+
+  .text-slider-article__avatar {
+    margin-left: -24px;
+  }
+
+  .text-slider-article__header {
+    margin-left: 39px;
+
+    letter-spacing: -.005em;
+
+    font: normal 24px/22px LeagueGothicRegular;
+  }
+
+  .text-slider-article__header_pink {
+    display: block;
+    margin-top: 2px;
+  }
+
+  .text-slider-article__text {
+    width: 255px;
+    height: 145px;
+    margin: 9px 0 0 39px;
+  }
+
+  .text-slider__radio-block {
+    margin: 67px 0 0 116px;
+  }
+
+  .updates-block {
+    width: 350px;
+    height: 320px;
+    margin: 0 118px 0 40px;
+  }
+
+  .update__text {
+    width: 255px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .updates-block__expand {
+    margin-left: 258px;
+  }
+
+  .sponsors {
+    width: 768px;
+  }
+
+  .sponsors__logo {
+    margin-right: 10px;
+  }
+
+  .sponsors__logo_1 {
+    margin-left: 4px;
+  }
+
+  .sponsors__logo_2 {
+    margin-left: 12px;
+  }
+
+  .sponsors__logo_3 {
+    margin-left: 8px;
+  }
+
+  .sponsors__logo_4 {
+    margin-left: 9px;
+  }
+
+  .sponsors__logo_5 {
+    margin-left: 20px;
+  }
+
+  .sponsors__logo_6 {
+    margin-left: 34px;
+    margin-right: 0;
+  }
+
+  .pre-footer-lead {
+    width: 205px;
+    margin-top: 3px;
+  }
+
+  .pre-footer-lead__header {
+    font: normal 24px/30px LeagueGothicRegular;
+  }
+
+  .pre-footer-lead__copy-r {
+    display: none;
+  }
+
+  .pre-footer-lead__text {
+    margin-top: 7px;
+  }
+
+  .pre-footer-article {
+    width: 205px;
+    margin: 3px -3px 0 61px;
+  }
+
+  .pre-footer-article__header {
+    font: normal 24px/30px LeagueGothicRegular;
+  }
+
+  .custom-footer {
+    height: 201px;
+  }
+
+  .footer-menu {
+    width: 526px;
+    margin: 45px 0 0 -3px;
+  }
+
+  .custom-footer__copy-r {
+    margin: 103px 0 0 63px;
+  }
+
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .box {
     margin: 0;
   }
