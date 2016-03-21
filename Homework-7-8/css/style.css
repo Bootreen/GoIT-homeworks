@@ -36,6 +36,7 @@ html {
   /*У span даже после reset.css остается какой-то левый марджин, компенсируем его*/
   margin-left: -3px;
   /*Костылик для браузеров без поддержки webkit*/
+
   color: #322539;
   /*Для нормальных браузеров градиентный шрифт*/
   background: -webkit-linear-gradient(#745083, #322539);
@@ -808,9 +809,9 @@ html {
   }
 
   .updates-block {
+    width: 350px;
     height: 320px;
     margin: 0 118px 0 40px;
-    width: 350px;
   }
 
   .update__text {
@@ -1000,8 +1001,8 @@ html {
   }
 
   .main-slider-article {
+    width: 200px;
     margin: 94px 0 0 17px;
-    width: 200px;
   }
 
   .main-slider-article__header {
@@ -1037,9 +1038,11 @@ html {
   }
 
   .central {
-    margin-top: 99px;
     flex-direction: column;
-    height: 600px;
+
+    height: 600px;
+    margin-top: 99px;
+
     align-items: center;
   }
 
@@ -1058,15 +1061,16 @@ html {
   }
 
   .main {
+    flex-direction: column;
+
     height: 768px;
     margin-top: 17px;
-    flex-direction: column;
+
     align-items: center;
   }
 
   .text-slider {
     width: 418px;
-
     margin: 8px 0 0 20px;
   }
 
@@ -1075,14 +1079,15 @@ html {
   }
 
   .text-slider-article__avatar {
-    margin-left: -22px;
+    margin-top: -8px;
   }
 
   .text-slider-article__header {
     margin-left: 41px;
 
-    font: normal 30px/30px LeagueGothicRegular;
     letter-spacing: -0.008em;
+
+    font: normal 30px/30px LeagueGothicRegular;
   }
 
   .text-slider-article__header_pink {
@@ -1093,7 +1098,6 @@ html {
 
   .text-slider-article__text {
     width: 350px;
-    height: 170px;
     margin: 13px 0 0 41px;
   }
 
@@ -1113,6 +1117,7 @@ html {
   .sponsors {
     width: 480px;
     height: 207px;
+
     flex-flow: row wrap;
   }
 
@@ -1144,8 +1149,9 @@ html {
     margin: -13px 0 0 44px;  }
 
   .pre-footer {
-    height: 670px;
     flex-direction: column;
+
+    height: 670px;
   }
 
   .pre-footer-lead {
@@ -1168,6 +1174,7 @@ html {
 
   .custom-footer {
     flex-direction: column;
+
     align-items: center;
   }
 
@@ -1206,35 +1213,19 @@ html {
   }
 
   .main-slider__wrapper {
-    width: 310px;
-  }
-
-  .main-slider__nav {
-    padding: 106px 0px;
+    width: 276px;
   }
 
   .main-slider-article {
-    margin: 94px 0 0 17px;
-    width: 200px;
+    margin: 94px 0 0 41px;
   }
 
   .main-slider-article__header {
-    letter-spacing: -0.015em;
-
-    font: normal 36px/36px LeagueGothicRegular;
+    letter-spacing: -0.012em;
   }
 
   .main-slider-article__sub-header {
-    width: 200px;
-    margin-top: 1px;
-
-    letter-spacing: -0.031em;
-
-    font: normal 19px/20px LeagueGothicRegular;
-  }
-
-  .main-slider-article__text {
-    display: none;
+    letter-spacing: -0.025em;
   }
 
   .main-slider__image {
@@ -1242,45 +1233,35 @@ html {
   }
 
   .main-slider__radio-block {
-    margin: 10px 0 0 50px;
+    margin: 228px 0 0 101px;
   }
 
   .central {
-    margin-top: 99px;
-    flex-direction: column;
-    height: 600px;
-    align-items: center;
+    margin-top: 67px;
   }
 
   .central-article {
-    width: 428px;
-    margin: 16px 0 11px 0;
-    padding: 0 19px 0 33px;
+    width: 270px;
+    margin: 18px 0 13px 0;
+    padding: 0 21px 0 33px;
   }
 
   .central-article__text {
-    height: 75px;
+    letter-spacing: -0.005em;
   }
 
   .central-article__expand {
-    margin-left: 364px;
+    margin: 14px 0 0 205px;
   }
 
   .main {
-    height: 768px;
-    margin-top: 17px;
-    flex-direction: column;
-    align-items: center;
+    height: 632px;
+    margin-top: 153px;
   }
 
   .text-slider {
-    width: 418px;
-
-    margin: 8px 0 0 20px;
-  }
-
-  .text-slider-article {
-    width: 100%;
+    width: 258px;
+    margin-top: -125px;
   }
 
   .text-slider-article__avatar {
@@ -1288,40 +1269,60 @@ html {
   }
 
   .text-slider-article__header {
-    margin-left: 41px;
+    margin: 25px 0 0 37px;
 
-    font: normal 30px/30px LeagueGothicRegular;
-    letter-spacing: -0.008em;
+    font: normal 24px/22px LeagueGothicRegular;
   }
 
   .text-slider-article__header_pink {
-    display: inline;
+    display: block;
 
     margin-top: 2px;
   }
 
   .text-slider-article__text {
-    width: 350px;
+    width: 180px;
     height: 170px;
-    margin: 13px 0 0 41px;
+    margin-top: 5px;
   }
 
   .text-slider__radio-block {
-    margin: 55px 0 0 164px;
+    margin: 49px 0 0 100px;
   }
 
   .updates-block {
-    width: 360px;
-    margin: 62px 118px 23px 127px;
+    width: 300px;
+    margin: 59px 118px 23px 99px;
+  }
+
+  .update {
+    margin-bottom: 20px;
+  }
+
+  .update__header {
+    overflow: hidden;
+
+    width: 156px;
+
+    white-space: nowrap;
+  }
+
+  .update__text {
+    overflow: hidden;
+
+    width: 213px;
+
+    white-space: nowrap;
   }
 
   .updates-block__expand {
-    margin-left: 268px;
+    margin: 14px 0 0 205px;
   }
 
   .sponsors {
     width: 480px;
     height: 207px;
+
     flex-flow: row wrap;
   }
 
@@ -1354,8 +1355,9 @@ html {
   }
 
   .pre-footer {
-    height: 670px;
     flex-direction: column;
+
+    height: 670px;
   }
 
   .pre-footer-lead {
@@ -1378,6 +1380,7 @@ html {
 
   .custom-footer {
     flex-direction: column;
+
     align-items: center;
   }
 
