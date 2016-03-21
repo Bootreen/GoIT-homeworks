@@ -8,6 +8,7 @@ html {
   background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
   background-position: top;
+  overflow-x: hidden;
 }
 
 .custom-header {
@@ -651,7 +652,7 @@ html {
 }
 
 /*Адаптация под планшет (768-960px в ширину)*/
-@media all and (max-width: 960px) {
+@media all and (max-width: 959px) {
 
   .backplate {
     width: 960px;
@@ -901,7 +902,7 @@ html {
 }
 
 /*Адаптация макета под телефон (480-768px в ширину)*/
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
 
   .backplate {
     width: 768px;
@@ -1194,7 +1195,7 @@ html {
 }
 
 /*Адаптация макета под телефон (320-480px в ширину)*/
-@media (max-width: 480px) {
+@media (max-width: 479px) {
 
   .backplate {
     width: 480px;
@@ -1364,6 +1365,15 @@ html {
 
   .custom-footer__copy-r {
     margin-top: -105px;
+  }
+
+}
+
+/*Включаем горизонтальный скроллинг для устройств с шириной экрана менее 320px*/
+@media (max-width: 319px) {
+
+  .backplate {
+    overflow-x: scroll;
   }
 
 }
