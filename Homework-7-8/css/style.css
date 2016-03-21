@@ -654,10 +654,6 @@ html {
 /*Адаптация под планшет (768-960px в ширину)*/
 @media all and (max-width: 959px) {
 
-  .backplate {
-    width: 960px;
-  }
-
   .custom-header {
     width: 768px;
     height: 244px;
@@ -903,10 +899,6 @@ html {
 
 /*Адаптация макета под телефон (480-768px в ширину)*/
 @media all and (max-width: 767px) {
-
-  .backplate {
-    width: 768px;
-  }
 
   .custom-header {
     width: 480px;
@@ -1196,10 +1188,6 @@ html {
 
 /*Адаптация макета под телефон (320-480px в ширину)*/
 @media (max-width: 479px) {
-
-  .backplate {
-    width: 480px;
-  }
 
   .custom-header {
     width: 320px;
