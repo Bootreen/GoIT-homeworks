@@ -23,11 +23,11 @@ html {
 }
 
 .logo__text {
-  letter-spacing: -.01em;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
 
   color: white;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 
   font: normal 48px/48px LeagueGothicRegular;
 }
@@ -36,7 +36,6 @@ html {
   /*У span даже после reset.css остается какой-то левый марджин, компенсируем его*/
   margin-left: -3px;
   /*Костылик для браузеров без поддержки webkit*/
-
   color: #322539;
   /*Для нормальных браузеров градиентный шрифт*/
   background: -webkit-linear-gradient(#745083, #322539);
@@ -48,11 +47,12 @@ html {
 
 .header-menu {
   position: relative;
+  z-index: 5;
+
   float: right;
 
   width: 640px;
   margin-top: 72px;
-  z-index: 5;
 }
 
 .header-menu__list {
@@ -64,18 +64,18 @@ html {
 
 .header-menu__item {
   display: block;
-  box-sizing: border-box;
 
+  box-sizing: border-box;
   padding: 2px 6px;
 }
 
 .header-menu__item-link {
   text-decoration: none;
-  letter-spacing: -.02em;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
 
   color: white;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 
   font: normal 24px/24px LeagueGothicRegular;
 }
@@ -91,7 +91,7 @@ html {
 
   height: 400px;
 
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
 
   justify-content: space-between;
 }
@@ -102,9 +102,6 @@ html {
 }
 
 .main-slider__nav {
-  /*Проверить, нахрена я тут ставил relative*/
-  position: relative;
-
   padding: 183px 15px;
 }
 
@@ -112,7 +109,7 @@ html {
   text-decoration: none;
 
   color: white;
-  text-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
   font: normal 34px/34px CustomIcons;
 }
@@ -125,21 +122,21 @@ html {
 }
 
 .main-slider-article__header {
-  letter-spacing: -.017em;
+  letter-spacing: -0.017em;
   text-transform: capitalize;
 
   color: white;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 
   font: normal 60px/60px LeagueGothicRegular;
 }
 
 .main-slider-article__sub-header {
-  letter-spacing: -.002em;
+  letter-spacing: -0.002em;
   text-transform: uppercase;
 
   color: #edbfff;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 
   font: normal 31px/30px LeagueGothicRegular;
 }
@@ -147,10 +144,10 @@ html {
 .main-slider-article__text {
   margin-top: 6px;
 
-  letter-spacing: -.003em;
+  letter-spacing: -0.003em;
 
   color: white;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 
   font: normal 18px/24px OpenSansLight;
 }
@@ -181,7 +178,7 @@ html {
 
   border: none;
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .main-slider__radio-item_active {
@@ -205,7 +202,7 @@ html {
   border-top: 1px solid black;
   border-bottom: 1px solid white;
   background: -webkit-linear-gradient(#745083, #322539);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
   justify-content: center;
 }
@@ -223,7 +220,7 @@ html {
   text-decoration: none;
 
   color: white;
-  text-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
   font: normal 24px/24px CustomIcons;
 }
@@ -231,11 +228,11 @@ html {
 .central-article__header {
   margin-left: 52px;
 
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
 
   color: white;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 
   font: normal 28px/28px LeagueGothicRegular;
 }
@@ -247,10 +244,10 @@ html {
   height: 120px;
   margin: 8px 0 0 50px;
 
-  letter-spacing: -.008em;
+  letter-spacing: -0.008em;
 
   color: white;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 
   font: normal 16px/24px OpenSansLight;
 }
@@ -261,11 +258,11 @@ html {
 
 .central-article__expand-link {
   text-decoration: none;
-  letter-spacing: -.02em;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
 
   color: white;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 
   font: normal 19px/19px LeagueGothicRegular;
 }
@@ -315,7 +312,7 @@ html {
 .text-slider-article__header {
   margin: 30px 0 0 41px;
 
-  letter-spacing: -.008em;
+  letter-spacing: -0.008em;
   text-transform: uppercase;
 
   color: #454545;
@@ -335,7 +332,7 @@ html {
   height: 170px;
   margin: 8px 0 0 42px;
 
-  letter-spacing: -.005em;
+  letter-spacing: -0.005em;
 
   color: #454545;
 
@@ -359,7 +356,7 @@ html {
 
   border-radius: 8px;
   background-color: white;
-  box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
 
 .text-slider__radio-item_active {
@@ -381,7 +378,7 @@ html {
 .updates-block__header {
   margin: 30px 0 15px 18px;
 
-  letter-spacing: -.008em;
+  letter-spacing: -0.008em;
   text-transform: uppercase;
 
   color: #454545;
@@ -430,7 +427,7 @@ html {
   margin-bottom: 18px;
   padding-top: 3px;
 
-  letter-spacing: -.008em;
+  letter-spacing: -0.008em;
 
   color: #454545;
 
@@ -443,7 +440,7 @@ html {
 
 .updates-block__expand-link {
   text-decoration: none;
-  letter-spacing: -.02em;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
 
   color: #454545;
@@ -533,7 +530,7 @@ html {
 }
 
 .pre-footer-lead__header {
-  letter-spacing: -.01em;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
 
   color: #454545;
@@ -558,7 +555,7 @@ html {
 
   margin-top: -1px;
 
-  letter-spacing: -.005em;
+  letter-spacing: -0.005em;
 
   color: #454545;
 
@@ -574,7 +571,7 @@ html {
 }
 
 .pre-footer-article__header {
-  letter-spacing: -.008em;
+  letter-spacing: -0.008em;
   text-transform: uppercase;
 
   color: #454545;
@@ -588,7 +585,7 @@ html {
 
   margin-top: 7px;
 
-  letter-spacing: -.005em;
+  letter-spacing: -0.005em;
 
   color: #454545;
 
@@ -626,11 +623,11 @@ html {
 
 .footer-menu__item-link {
   text-decoration: none;
-  letter-spacing: -.02em;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
 
   color: white;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 
   font: normal 20px/24px LeagueGothicRegular;
 }
@@ -643,7 +640,7 @@ html {
   margin: 56px 0 0 297px;
 
   color: white;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 
   font: normal 12px/12px OpenSansLight;
 }
@@ -652,9 +649,8 @@ html {
   font: normal 12px/12px OpenSansExtraBold;
 }
 
-/*Заглушки для адаптивных стилей*/
-
-@media (max-width: 960px) {
+/*Адаптация под планшет (768-960px в ширину)*/
+@media all and (max-width: 960px) {
 
   .backplate {
     width: 960px;
@@ -684,12 +680,12 @@ html {
 
   .main-slider__wrapper {
     width: 724px;
-    margin: 0 0 0 0;
+    margin: 0;
   }
 
   .main-slider__nav {
+    margin: 0;
     padding: 183px 0;
-    margin: 0 0 0 0;
   }
 
   .main-slider-article {
@@ -700,27 +696,30 @@ html {
   }
 
   .main-slider-article__header {
-    letter-spacing: -.015em;
+    letter-spacing: -0.015em;
 
     font: normal 48px/48px LeagueGothicRegular;
   }
 
   .main-slider-article__sub-header {
-    letter-spacing: -.011em;
+    overflow: hidden;
+
+    width: 270px;
+    margin-top: 6px;
+
+    white-space: nowrap;
+    letter-spacing: -0.011em;
 
     font: normal 24px/24px LeagueGothicRegular;
-    width: 270px;
-    overflow: hidden;
-    margin-top: 6px;
-    white-space: nowrap;
   }
 
   .main-slider-article__text {
+    overflow-y: hidden;
+
+    height: 105px;
     margin-top: 7px;
 
     font: normal 16px/26px OpenSansLight;
-    height: 105px;
-    overflow-y: hidden;
   }
 
   .main-slider__image {
@@ -748,7 +747,7 @@ html {
   .central-article__header {
     margin-left: 50px;
 
-    letter-spacing: -.01em;
+    letter-spacing: -0.01em;
 
     font: normal 24px/24px LeagueGothicRegular;
   }
@@ -759,7 +758,7 @@ html {
   }
 
   .central-article__expand {
-    margin: 12px 0 0 140px;
+    margin: 12px 0 0 141px;
   }
 
   .main {
@@ -771,9 +770,9 @@ html {
     height: 272px;
     margin-left: 139px;
 
-    background-image: none;
     background-color: white;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, .05);
+    background-image: none;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
   }
 
   .text-slider-article {
@@ -794,6 +793,7 @@ html {
 
   .text-slider-article__header_pink {
     display: block;
+
     margin-top: 2px;
   }
 
@@ -808,14 +808,16 @@ html {
   }
 
   .updates-block {
-    width: 350px;
     height: 320px;
     margin: 0 118px 0 40px;
+    width: 350px;
   }
 
   .update__text {
-    width: 255px;
     overflow: hidden;
+
+    width: 255px;
+
     white-space: nowrap;
   }
 
@@ -852,8 +854,8 @@ html {
   }
 
   .sponsors__logo_6 {
+    margin-right: 0;
     margin-left: 34px;
-    margin-right: 0;
   }
 
   .pre-footer-lead {
@@ -897,7 +899,8 @@ html {
 
 }
 
-@media (max-width: 768px) {
+/*Адаптация макета под телефон (480-768px в ширину)*/
+@media all and (max-width: 768px) {
 
   .backplate {
     width: 768px;
@@ -913,65 +916,63 @@ html {
   }
 
   .header-menu {
-    box-sizing: border-box;
-    margin: 16px auto 0;
     overflow: hidden;
+
+    box-sizing: border-box;
     width: 44px;
     height: 42px;
+    margin: 16px auto 0;
+
     border: 1px solid rgba(0, 0, 0, 0);
-    /*box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-    background-color: rgba(54, 41, 62, 0.9);*/
     border-radius: 12px;
   }
 
   .header-menu:hover {
-    box-sizing: border-box;
-    margin: 16px auto 0;
-    overflow-y: hidden;
     width: 246px;
     height: 258px;
-    border: 1px solid #051116;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-    background-color: rgba(54, 41, 62, 0.9);
-    border-radius: 12px;
+
     transition: 0.5s;
+
+    border: 1px solid #051116;
+    background-color: rgba(54, 41, 62, 0.9);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   }
 
   .header-menu__list {
     flex-direction: column;
-    /*height: 100%;*/
   }
 
   .header-menu__item {
-    /*box-sizing: border-box;*/
-    padding: 6px 0;
-    display: block;
-    /*width: 244px;*/
     height: 43px;
-    align-content: center;
+    padding: 6px 0;
+
     border-top: 1px solid rgba(101, 83, 108, 0.9);
     border-bottom: 1px solid rgba(73, 60, 80, 0.9);
+
+    align-content: center;
   }
 
   .header-menu__item:hover {
-    border-top: 1px solid rgba(101, 83, 108, 0.9);
-    border-bottom: 1px solid rgba(73, 60, 80, 0.9);
-    background-color: rgba(0, 0, 0, 0.3);
     transition: 0.7s;
+
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   .header-menu__item-link {
     display: block;
+
     height: 100%;
     margin: 5px auto;
 
-    border-bottom: 2px solid rgba(0, 0, 0, 0);
     text-align: center;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
   }
 
   .header-menu__item-link:hover {
-    border-bottom: 2px solid #edbfff;
     transition: 0.7s;
+
+    border-bottom: 2px solid #edbfff;
   }
 
   .header-menu__item_menu-start, .header-menu__item_menu-start:hover {
@@ -986,165 +987,141 @@ html {
     border-bottom: 2px solid rgba(0, 0, 0, 0);
   }
 
-  /*.header-menu__item_always-visible {
-    display: block;
-  }*/
-
   .main-slider {
-    justify-content: center;
+    height: 246px;
   }
 
   .main-slider__wrapper {
-    width: 724px;
-    margin: 0 0 0 0;
+    width: 436px;
   }
 
   .main-slider__nav {
-    padding: 183px 0;
-    margin: 0 0 0 0;
+    padding: 106px 0;
   }
 
   .main-slider-article {
-    float: left;
-
-    width: 275px;
-    margin: 100px 0 0 21px;
+    margin: 94px 0 0 17px;
+    width: 200px;
   }
 
   .main-slider-article__header {
     letter-spacing: -.015em;
 
-    font: normal 48px/48px LeagueGothicRegular;
+    font: normal 36px/36px LeagueGothicRegular;
   }
 
   .main-slider-article__sub-header {
-    letter-spacing: -.011em;
+    width: 200px;
+    margin-top: 1px;
 
-    font: normal 24px/24px LeagueGothicRegular;
-    width: 270px;
-    overflow: hidden;
-    margin-top: 6px;
-    white-space: nowrap;
+    letter-spacing: -.031em;
+
+    font: normal 19px/20px LeagueGothicRegular;
   }
 
   .main-slider-article__text {
-    margin-top: 7px;
-
-    font: normal 16px/26px OpenSansLight;
-    height: 105px;
-    overflow-y: hidden;
+    display: none;
   }
 
   .main-slider__image {
-    margin: -23px 0 0 425px;
+    margin: -9px 0 0 234px;
+  }
+
+  .main-slider__image-src {
+    width: 192px;
+    height: 304px;
   }
 
   .main-slider__radio-block {
-    margin: 24px 0 0 521px;
+    margin: -29px 0 0 181px;
   }
 
   .central {
-    margin-top: 154px;
+    margin-top: 99px;
+    flex-direction: column;
+    height: 600px;
+    align-items: center;
   }
 
   .central-article {
-    width: 205px;
-    margin: 78px 0 0 0;
+    width: 428px;
+    margin: 16px 0 11px 0;
     padding: 0 19px 0 33px;
   }
 
-  .central-article__icon {
-    margin-top: 4px;
-  }
-
-  .central-article__header {
-    margin-left: 50px;
-
-    letter-spacing: -.01em;
-
-    font: normal 24px/24px LeagueGothicRegular;
-  }
-
   .central-article__text {
-    height: 140px;
-    margin-top: 2px;
+    height: 75px;
   }
 
   .central-article__expand {
-    margin: 12px 0 0 140px;
+    margin-left: 364px;
   }
 
   .main {
-    margin-top: 100px;
+    height: 768px;
+    margin-top: 17px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .text-slider {
-    width: 314px;
-    height: 272px;
-    margin-left: 139px;
+    width: 418px;
 
-    background-image: none;
-    background-color: white;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, .05);
+    margin: 8px 0 0 20px;
   }
 
   .text-slider-article {
-    width: 310px;
+    width: 418px;
   }
 
   .text-slider-article__avatar {
-    margin-left: -24px;
+    margin-left: -22px;
   }
 
   .text-slider-article__header {
-    margin-left: 39px;
+    margin-left: 41px;
 
-    letter-spacing: -.005em;
-
-    font: normal 24px/22px LeagueGothicRegular;
+    font: normal 30px/30px LeagueGothicRegular;
+    letter-spacing: -0.008em;
   }
 
   .text-slider-article__header_pink {
-    display: block;
+    display: inline;
+
     margin-top: 2px;
   }
 
   .text-slider-article__text {
-    width: 255px;
-    height: 145px;
-    margin: 9px 0 0 39px;
+    width: 350px;
+    height: 170px;
+    margin: 13px 0 0 41px;
   }
 
   .text-slider__radio-block {
-    margin: 67px 0 0 116px;
+    margin: 55px 0 0 164px;
   }
 
   .updates-block {
-    width: 350px;
-    height: 320px;
-    margin: 0 118px 0 40px;
-  }
-
-  .update__text {
-    width: 255px;
-    overflow: hidden;
-    white-space: nowrap;
+    width: 360px;
+    margin: 62px 118px 23px 127px;
   }
 
   .updates-block__expand {
-    margin-left: 258px;
+    margin-left: 268px;
   }
 
   .sponsors {
-    width: 768px;
+    width: 480px;
+    height: 207px;
+    flex-flow: row wrap;
   }
 
   .sponsors__logo {
-    margin-right: 10px;
+    margin: 12px 10px 0 0;
   }
 
   .sponsors__logo_1 {
-    margin-left: 4px;
+    margin-left: 64px;
   }
 
   .sponsors__logo_2 {
@@ -1156,60 +1133,60 @@ html {
   }
 
   .sponsors__logo_4 {
-    margin-left: 9px;
+    margin: -14px 0 0 40px;
   }
 
   .sponsors__logo_5 {
-    margin-left: 20px;
+    margin: -14px 0 0 30px;
   }
 
   .sponsors__logo_6 {
-    margin-left: 34px;
-    margin-right: 0;
+    margin: -13px 0 0 44px;  }
+
+  .pre-footer {
+    height: 670px;
+    flex-direction: column;
   }
 
   .pre-footer-lead {
-    width: 205px;
-    margin-top: 3px;
-  }
-
-  .pre-footer-lead__header {
-    font: normal 24px/30px LeagueGothicRegular;
-  }
-
-  .pre-footer-lead__copy-r {
-    display: none;
+    width: 442px;
+    margin: 58px 0 0px -2px;
   }
 
   .pre-footer-lead__text {
-    margin-top: 7px;
+    height: 97px;
   }
 
   .pre-footer-article {
-    width: 205px;
-    margin: 3px -3px 0 61px;
+    width: 442px;
+    margin: -19px -3px 0 -7px;
   }
 
-  .pre-footer-article__header {
-    font: normal 24px/30px LeagueGothicRegular;
+  .pre-footer-article__text {
+    height: 97px;
   }
 
   .custom-footer {
-    height: 201px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-menu {
-    width: 526px;
-    margin: 45px 0 0 -3px;
+    width: 434px;
+    margin-top: -44px;
+  }
+
+  .footer-menu__item-link {
+    letter-spacing: -0.008em;
   }
 
   .custom-footer__copy-r {
-    margin: 103px 0 0 63px;
+    margin: 34px 0 0 -3px;
   }
 
 }
 
-@media (max-width: 480px) {
+@media all and (max-width: 480px) {
   .box {
     margin: 0;
   }
