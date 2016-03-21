@@ -786,7 +786,7 @@ html {
   .text-slider-article__header {
     margin-left: 39px;
 
-    letter-spacing: -.005em;
+    letter-spacing: -0.005em;
 
     font: normal 24px/22px LeagueGothicRegular;
   }
@@ -996,7 +996,7 @@ html {
   }
 
   .main-slider__nav {
-    padding: 106px 0;
+    padding: 106px 0px;
   }
 
   .main-slider-article {
@@ -1005,16 +1005,16 @@ html {
   }
 
   .main-slider-article__header {
-    letter-spacing: -.015em;
+    letter-spacing: -0.015em;
 
     font: normal 36px/36px LeagueGothicRegular;
   }
 
   .main-slider-article__sub-header {
-    width: 200px;
+    width: 100%;
     margin-top: 1px;
 
-    letter-spacing: -.031em;
+    letter-spacing: -0.031em;
 
     font: normal 19px/20px LeagueGothicRegular;
   }
@@ -1071,7 +1071,7 @@ html {
   }
 
   .text-slider-article {
-    width: 418px;
+    width: 100%;
   }
 
   .text-slider-article__avatar {
@@ -1186,8 +1186,212 @@ html {
 
 }
 
-@media all and (max-width: 480px) {
-  .box {
-    margin: 0;
+/*Адаптация макета под телефон (320-480px в ширину)*/
+@media (max-width: 480px) {
+
+  .backplate {
+    width: 480px;
   }
+
+  .custom-header {
+    width: 320px;
+  }
+
+  .logo {
+    padding-left: 82px;
+  }
+
+  .main-slider {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .main-slider__wrapper {
+    width: 310px;
+  }
+
+  .main-slider__nav {
+    padding: 106px 0px;
+  }
+
+  .main-slider-article {
+    margin: 94px 0 0 17px;
+    width: 200px;
+  }
+
+  .main-slider-article__header {
+    letter-spacing: -0.015em;
+
+    font: normal 36px/36px LeagueGothicRegular;
+  }
+
+  .main-slider-article__sub-header {
+    width: 200px;
+    margin-top: 1px;
+
+    letter-spacing: -0.031em;
+
+    font: normal 19px/20px LeagueGothicRegular;
+  }
+
+  .main-slider-article__text {
+    display: none;
+  }
+
+  .main-slider__image {
+    display: none;
+  }
+
+  .main-slider__radio-block {
+    margin: 10px 0 0 50px;
+  }
+
+  .central {
+    margin-top: 99px;
+    flex-direction: column;
+    height: 600px;
+    align-items: center;
+  }
+
+  .central-article {
+    width: 428px;
+    margin: 16px 0 11px 0;
+    padding: 0 19px 0 33px;
+  }
+
+  .central-article__text {
+    height: 75px;
+  }
+
+  .central-article__expand {
+    margin-left: 364px;
+  }
+
+  .main {
+    height: 768px;
+    margin-top: 17px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-slider {
+    width: 418px;
+
+    margin: 8px 0 0 20px;
+  }
+
+  .text-slider-article {
+    width: 100%;
+  }
+
+  .text-slider-article__avatar {
+    margin-left: -22px;
+  }
+
+  .text-slider-article__header {
+    margin-left: 41px;
+
+    font: normal 30px/30px LeagueGothicRegular;
+    letter-spacing: -0.008em;
+  }
+
+  .text-slider-article__header_pink {
+    display: inline;
+
+    margin-top: 2px;
+  }
+
+  .text-slider-article__text {
+    width: 350px;
+    height: 170px;
+    margin: 13px 0 0 41px;
+  }
+
+  .text-slider__radio-block {
+    margin: 55px 0 0 164px;
+  }
+
+  .updates-block {
+    width: 360px;
+    margin: 62px 118px 23px 127px;
+  }
+
+  .updates-block__expand {
+    margin-left: 268px;
+  }
+
+  .sponsors {
+    width: 480px;
+    height: 207px;
+    flex-flow: row wrap;
+  }
+
+  .sponsors__logo {
+    margin: 12px 10px 0 0;
+  }
+
+  .sponsors__logo_1 {
+    margin-left: 64px;
+  }
+
+  .sponsors__logo_2 {
+    margin-left: 12px;
+  }
+
+  .sponsors__logo_3 {
+    margin-left: 8px;
+  }
+
+  .sponsors__logo_4 {
+    margin: -14px 0 0 40px;
+  }
+
+  .sponsors__logo_5 {
+    margin: -14px 0 0 30px;
+  }
+
+  .sponsors__logo_6 {
+    margin: -13px 0 0 44px;
+  }
+
+  .pre-footer {
+    height: 670px;
+    flex-direction: column;
+  }
+
+  .pre-footer-lead {
+    width: 442px;
+    margin: 58px 0 0px -2px;
+  }
+
+  .pre-footer-lead__text {
+    height: 97px;
+  }
+
+  .pre-footer-article {
+    width: 442px;
+    margin: -19px -3px 0 -7px;
+  }
+
+  .pre-footer-article__text {
+    height: 97px;
+  }
+
+  .custom-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-menu {
+    width: 434px;
+    margin-top: -44px;
+  }
+
+  .footer-menu__item-link {
+    letter-spacing: -0.008em;
+  }
+
+  .custom-footer__copy-r {
+    margin: 34px 0 0 -3px;
+  }
+
 }
