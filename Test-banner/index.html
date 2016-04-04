@@ -1,59 +1,54 @@
-<!--
-	NOTES:
-	1. All tokens are represented by '$' sign in the template.
-	2. You can write your code only wherever mentioned.
-	3. All occurrences of existing tokens will be replaced by their appropriate values.
--->
-
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>ulmart</title>
-<!-- write your code here -->
+	<meta charset="UTF-8">
+	<title>Баннерный полигон :)</title>
+	<link rel="stylesheet" href="/css/reset.css" charset="utf-8">
+	<link rel="stylesheet" href="/css/style.css" charset="utf-8">
+	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+	<script src="js/ulmart.js?1459686177512"></script>
+	<script>
+	var canvas, stage, exportRoot;
+	function init() {
+		// --- write your JS code here ---
 
+		canvas = document.getElementById("canvas");
+		images = images||{};
+		ss = ss||{};
 
-<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="js/ulmart.js?1459686177512"></script>
-<script>
-var canvas, stage, exportRoot;
-function init() {
-	// --- write your JS code here ---
+		var loader = new createjs.LoadQueue(false);
+		loader.addEventListener("fileload", handleFileLoad);
+		loader.addEventListener("complete", handleComplete);
+		loader.loadFile({src:"images/ulmart_atlas_.json?1459686177512", type:"spritesheet", id:"ulmart_atlas_"}, true);
+		loader.loadManifest(lib.properties.manifest);
+	}
 
-	canvas = document.getElementById("canvas");
-	images = images||{};
-	ss = ss||{};
+	function handleFileLoad(evt) {
+		if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+	}
 
-	var loader = new createjs.LoadQueue(false);
-	loader.addEventListener("fileload", handleFileLoad);
-	loader.addEventListener("complete", handleComplete);
-	loader.loadFile({src:"images/ulmart_atlas_.json?1459686177512", type:"spritesheet", id:"ulmart_atlas_"}, true);
-	loader.loadManifest(lib.properties.manifest);
-}
+	function handleComplete(evt) {
+		var queue = evt.target;
+		ss["ulmart_atlas_"] = queue.getResult("ulmart_atlas_");
+		exportRoot = new lib.ulmart();
 
-function handleFileLoad(evt) {
-	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
-}
+		stage = new createjs.Stage(canvas);
+		stage.addChild(exportRoot);
+		stage.update();
 
-function handleComplete(evt) {
-	var queue = evt.target;
-	ss["ulmart_atlas_"] = queue.getResult("ulmart_atlas_");
-	exportRoot = new lib.ulmart();
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}
 
-	stage = new createjs.Stage(canvas);
-	stage.addChild(exportRoot);
-	stage.update();
-
-	createjs.Ticker.setFPS(lib.properties.fps);
-	createjs.Ticker.addEventListener("tick", stage);
-}
-
-</script>
-
-<!-- write your code here -->
-
+	</script>
 </head>
-<body onload="init();" style="background-color:#D4D4D4;margin:0px;">
-	<canvas id="canvas" width="300" height="300" style="background-color:#0085C2"></canvas>
+
+<body onload="init();">
+	<div class="placeholder">
+		<canvas id="canvas"></canvas>	
+	</div>
 </body>
+
 </html>
