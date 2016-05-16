@@ -14,7 +14,7 @@ this.createForm = function() {
     var h3 = document.createElement('h3');
     var li = document.createElement('li');
     var ul = document.createElement('ul');
-    h3.innerHTML = (i)+'. Вопрос №'+(i);
+    h3.innerHTML = i+'. Вопрос №'+i;
     ol.appendChild(li);
     li.appendChild(h3);
     li.appendChild(ul);
@@ -24,9 +24,9 @@ this.createForm = function() {
       var label = document.createElement('label');
       liS.className = "spaced-li";
       input.setAttribute('type', 'checkbox');
-      input.setAttribute('id', 'q'+(i)+'-a'+(j));
-      label.setAttribute('for', 'q'+(i)+'-a'+(j));
-      label.innerHTML = ' Вариант ответа №'+(j);
+      input.setAttribute('id', 'q'+i+'-a'+j);
+      label.setAttribute('for', 'q'+i+'-a'+j);
+      label.innerHTML = ' Вариант ответа №'+j;
       ul.appendChild(liS);
       liS.appendChild(input);
       liS.appendChild(label);
