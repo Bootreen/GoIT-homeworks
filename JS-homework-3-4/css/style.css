@@ -1,0 +1,18 @@
+.test-form {
+  width: 600px;
+  margin: 5px 0 0 5px;
+  border: 1px solid black;
+}
+
+.centered-header {
+  text-align: center;
+}
+
+.centered-button {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.spaced-li {
+  margin-bottom: 7px;
+}
