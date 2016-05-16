@@ -10,23 +10,23 @@ this.createForm = function() {
   testForm.setAttribute('method', 'post');
   testForm.appendChild(h3C);
   testForm.appendChild(ol);
-  for (var i = 0; i < 3; i++) {
+  for (var i = 1; i < 4; i++) {
     var h3 = document.createElement('h3');
     var li = document.createElement('li');
     var ul = document.createElement('ul');
-    h3.innerHTML = (i+1)+'. Вопрос №'+(i+1);
+    h3.innerHTML = (i)+'. Вопрос №'+(i);
     ol.appendChild(li);
     li.appendChild(h3);
     li.appendChild(ul);
-    for (var j = 0; j < 3; j++) {
+    for (var j = 1; j < 4; j++) {
       var liS = document.createElement('li');
       var input = document.createElement('input');
       var label = document.createElement('label');
       liS.className = "spaced-li";
       input.setAttribute('type', 'checkbox');
-      input.setAttribute('id', 'q'+(i+1)+'-a'+(j+1));
-      label.setAttribute('for', 'q'+(i+1)+'-a'+(j+1));
-      label.innerHTML = ' Вариант ответа №'+(j+1);
+      input.setAttribute('id', 'q'+(i)+'-a'+(j));
+      label.setAttribute('for', 'q'+(i)+'-a'+(j));
+      label.innerHTML = ' Вариант ответа №'+(j);
       ul.appendChild(liS);
       liS.appendChild(input);
       liS.appendChild(label);
