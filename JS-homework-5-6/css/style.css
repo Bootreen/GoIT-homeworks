@@ -4,7 +4,7 @@ body {
   background-color: black;
 }
 
-menu {
+.button-block {
   padding: 0;
 }
 
@@ -24,11 +24,15 @@ menu {
 
 h1 {
   color: rgb(28, 184, 65);
+  font-family: monospace;
+  font-size: 2.8em;
 }
 
 h2 {
   color: rgb(66, 184, 221);
   margin: 0.3em 0;
+  font-family: monospace;
+  font-size: 2em;
 }
 
 .button-colored {
