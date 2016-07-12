@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2016 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="arrow-left" unicode="&#xe800;" d="M19 304c-25 25-25 67 0 92l435 435c25 25 67 25 92 0l78-77c25-26 25-67 0-93l-312-311 312-311c25-26 25-67 0-93l-78-77c-25-25-67-25-92 0l-435 435z" horiz-adv-x="643" />
+
+<glyph glyph-name="arrow-right" unicode="&#xe801;" d="M624 396c25-25 25-67 0-92l-435-435c-26-25-67-25-93 0l-77 77c-25 26-25 67 0 93l311 311-311 311c-25 26-25 67 0 93l77 77c26 25 67 25 93 0l435-435z" horiz-adv-x="643" />
+
+<glyph glyph-name="wrench" unicode="&#xe802;" d="M40 740c-56-65-53-163 9-225l52-52c51-50 127-61 188-33l0 0 291-289 0 0c-31-62-20-139 32-191l52-51c62-63 163-65 228-8l0 0-158 158 69 69 158-157 0 0c55 65 52 163-10 224l-52 52c-50 50-124 61-185 34l0 0-292 292 0 0c28 61 17 136-34 187l-52 51c-62 62-161 65-227 9l159-158-70-69-158 157 0 0z" horiz-adv-x="1000" />
+
+<glyph glyph-name="comment" unicode="&#xe803;" d="M929-150l15 267 0 0c155 73 256 194 256 330 0 223-269 403-600 403-331 0-600-180-600-403 0-222 269-403 600-403 47 0 94 4 138 11l0 0 191-205z" horiz-adv-x="1200" />
+
+<glyph glyph-name="notes" unicode="&#xe804;" d="M915 850l-653-112v-647l-11 3c-32 8-83 8-121-3-88-25-144-98-125-162 18-64 104-96 192-70 87 25 144 97 139 161v563l504 95v-486l-24 8c-32 9-69 8-107-3-87-25-143-97-125-161 19-65 105-96 192-71 88 25 144 98 139 162v723h0z" horiz-adv-x="916" />
+</font>
+</defs>
+</svg>

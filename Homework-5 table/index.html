@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Таблица-картина</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <table>
+      <!-- Столбцы и строки пронумерованы по классам для задания переменной
+      ширины и высоты, также отдельно прописан класс для крайнего правого
+      столбца (для отмены правой границы), плюс классы цветов ячеек -->
+      <tr class="row1">
+        <td class="col1 cell_white" colspan="2"></td>
+        <td class="col3 cell_white" colspan="2"></td>
+        <td class="last col5 cell_yellow" colspan="2"></td>
+      </tr>
+      <tr class="row2">
+        <td class="col1 cell_white"></td>
+        <td class="col2 cell_red" colspan="3" rowspan="2"></td>
+        <td class="last col5 cell_yellow" colspan="2"></td>
+      </tr>
+      <tr class="row3">
+        <td class="col1 cell_white" rowspan="2"></td>
+        <td class="col5 cell_white"></td>
+        <td class="last col6 cell_white"></td>
+      </tr>
+      <tr class="row4">
+        <td class="col2 cell_darkgrey"></td>
+        <td class="col3 cell_darkgrey"></td>
+        <td class="col4 cell_white"></td>
+        <td class="last col5 cell_white" colspan="2"></td>
+      </tr>
+      <tr class="row5">
+        <td class="col1 cell_yellow" rowspan="3"></td>
+        <td class="col2 cell_darkgrey"></td>
+        <td class="col3 cell_darkgrey"></td>
+        <td class="col4 cell_white"></td>
+        <td class="last col5 cell_blue" colspan="2" rowspan="2"></td>
+      </tr>
+      <tr class="row6">
+        <td class="col2 cell_white" colspan="2" rowspan="2"></td>
+        <td class="last col4 cell_darkgrey"></td>
+      </tr>
+      <tr class="row7">
+        <td class="last col4 cell_white" colspan="3"></td>
+      </tr>
+    </table>
+    <p>Композиция с красным, синим и желтым: холст, масло, CSS</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+@font-face{
+    font-family: 'Lucida Sans Unicode';
+    src: url('../fonts/Lucida Sans Unicode/lucida_sans_unicode_regular-webfont.eot');
+    src: url('../fonts/Lucida Sans Unicode/lucida_sans_unicode_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Lucida Sans Unicode/lucida_sans_unicode_regular-webfont.woff') format('woff'),
+         url('../fonts/Lucida Sans Unicode/lucida_sans_unicode_regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Arial";
+    src: url("../fonts/Arial/Arial-webfont.eot");
+    src: url("../fonts/Arial/Arial-webfont.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/Arial/Arial-webfont.woff") format("woff"),
+        url("../fonts/Arial/Arial-webfont.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: "Arial Black";
+    src: url("../fonts/Arial Black/Arial-black-webfont.eot");
+    src: url("../fonts/Arial Black/Arial-black-webfont.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/Arial Black/Arial-black-webfont.woff") format("woff"),
+        url("../fonts/Arial Black/Arial-black-webfont.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

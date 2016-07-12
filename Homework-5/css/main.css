@@ -1,0 +1,238 @@
+/*В макете не было темной подложки под контейнер, но на светлом фоне
+он смотрится не особо, поэтому решил добавить серо-зеленый фон*/
+body{
+  background: #355040;
+
+  /*Дефолтный шрифт для документа*/
+  font: normal 10.5pt/11pt Helvetica Neue Cyr, Tahoma;
+}
+
+/*Контейнер на 36 пикселей шире фона, это резерв под меню, поэтому
+фон выравниваем по низу*/
+.container{
+  width: 1215px;
+  height: 1064px;
+  margin: auto;
+
+  /*Под меню задан базовый фон, на случай, если картинка
+  с текстурой не прогрузится по какой-либо причине*/
+  background: url(../img/background.jpg) no-repeat bottom #074f8f;
+}
+
+/*У меню свой собственный фон с текстурой*/
+.menu{
+  height: 36px;
+
+  color: white;
+  background: url(../img/menu-back.jpg);
+}
+
+.submenu{
+  display: flex;
+  flex-direction: row;
+
+  height: 100%;
+}
+
+.central{
+  float: left;
+
+  width: 387px;
+  margin-left: 458px;
+
+  justify-content: space-between;
+}
+
+/*Вертикальную отбивку пришлось делать отдельным блоком
+из-за укороченной высоты линии*/
+.v_border{
+  width: 1px;
+  height: 30px;
+  margin: 3px 0;
+  padding-right: 10px;
+
+  border-right: 1px solid #60b5ed;
+}
+
+.central > li a{
+  display: block;
+
+  padding: 11px 10px;
+
+  text-decoration: none;
+
+  color: #60b5ed;
+}
+
+/*Выделение пункта меню при наведении курсора*/
+.central > li:hover a{
+  color: white;
+  background-color: #4eabda;
+}
+
+.right{
+  width: 357px;
+
+  justify-content: space-around;
+}
+
+.right a{
+  color: white;
+}
+
+.right > li{
+  padding-top: 11px;
+}
+
+/*У флажка свой собственный паддинг и марджины*/
+.right > li:first-child{
+  margin-left: 13px;
+
+  padding-top: 6px;
+}
+
+/*Отключаем подчеркивание ссылок во 2-м элементе*/
+.right > li:nth-child(2) a{
+  text-decoration: none;
+}
+
+/*Градиент под пунктами регистрации в меню и персональные паддинги*/
+.right > li:last-child{
+  display: block;
+
+  box-sizing: border-box;
+  margin-left: 6px;
+  padding: 11px 12px 0;
+
+  border-right: #4299d2;
+  border-bottom: #4299d2;
+
+  /*На самом деле там границы слева-справа тоже сделаны градиентом, но я решил,
+  что реализация такой мелочи это уже перебор, но, если делать через css,
+  это можно реализовать через два наложенных фона, причем нижний будет
+  на 2px шире верхнего*/
+  border-left: #4299d2;
+  border-radius: 1px;
+  background: linear-gradient(to bottom, #51b1dc, #2e7ac4);
+}
+
+.reg_wrapper{
+  width: 560px;
+  height: 613px;
+  margin: 207px auto;
+}
+
+/*Задаем полупрозрачность для регистрационной формы и ее шапки*/
+.reg_title, .registration{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.63);
+}
+
+.reg_title{
+  height: 62px;
+  /*margin: 213px 302px 2px 353px;*/
+  margin-bottom: 2px;
+
+  text-align: center;
+}
+
+.reg_title p{
+  padding-top: 21px;
+
+  font: 18pt/18pt Helvetica Neue Cyr, Tahoma;
+}
+
+.registration{
+  height: 549px;
+  /*margin: 0 302px 0 353px;*/
+}
+
+.registration ul{
+  display: flex;
+}
+
+.divider > ul{
+  flex-direction: row;
+}
+
+.main > ul{
+  flex-direction: column;
+}
+
+.fb, .divider, .main{
+  margin: 0 142px;
+}
+
+.fb{
+  padding-top: 36px;
+}
+
+/*Чтобы обойтись без картинок, делаем отбивку средствами CSS*/
+.double_line{
+  width: 123px;
+  height: 1px;
+  margin: 37px 0 35px;
+
+  border-bottom: 1px solid black;
+  background-color: #666666;
+}
+
+.divider p{
+  margin-top: 32px;
+  padding: 0 5px;
+
+  opacity: 0.63;
+}
+
+/*Кастомный стиль для текстовых полей ввода*/
+.custom_in{
+  box-sizing: border-box;
+  width: 276px;
+  height: 36px;
+  margin-bottom: 16px;
+
+  text-indent: 18px;
+
+  color: white;
+
+  /*Убираем стандартную рамку input.text и тут же рисуем кастомную снизу*/
+  border: none;
+  border-bottom: 1px solid #4b4a49;
+  background: linear-gradient(to bottom, #111010, #141414);
+
+  /*Шрифт пришлось прописывать принудительно, reset.css его не занулил*/
+  font: normal 10.5pt/11pt Helvetica Neue Cyr, Tahoma;
+}
+
+/*Стиль для активных полей ввода*/
+.custom_in:focus{
+  background: #1b5288;
+
+  /*У поля с фокусом согласно макету есть небольшая внутренняя тень*/
+  box-shadow: inset -1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/*Оказалось, что по дефолту у чекбокса марджины 3px, а по макету они лишние,
+поэтому занулил и отдельно прописал нижний отступ*/
+input#notifications{
+  margin: 0 0 27px 0;
+}
+
+.main label{
+  opacity: 0.63;
+}
+
+/*Выравниваем кнопку отправки формы*/
+.main > ul > li:last-child{
+  margin: 0 0 16px 62px;
+}
+
+.tos{
+  margin: 0 128px 0 124px;
+
+  text-align: center;
+
+  opacity: 0.6;
+
+  font: normal 8pt/12pt Helvetica Neue Cyr, Tahoma;
+}

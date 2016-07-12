@@ -1,0 +1,58 @@
+body {
+  margin: 0 auto;
+
+  background-color: black;
+}
+
+.button-block {
+  padding: 0;
+}
+
+.timer-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 50px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h1 {
+  color: rgb(28, 184, 65);
+  font-family: monospace;
+  font-size: 2.8em;
+}
+
+h2 {
+  color: rgb(66, 184, 221);
+  margin: 0.3em 0;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+.button-colored {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-green {
+  background: rgb(28, 184, 65);
+}
+
+.button-red {
+  background: rgb(202, 60, 60);
+}
+
+.button-blue {
+  background: rgb(66, 184, 221);
+}
+
+.button-orange {
+  background: rgb(223, 117, 20);
+}

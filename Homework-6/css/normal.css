@@ -1,0 +1,642 @@
+body{
+  width: 100%;
+  background-color: white;
+  font-family: Lucida Sans Unicode;
+  font-size: 12px;
+}
+
+/*Задаем ширину основных блоков страницы и центруем их*/
+header, main, footer{
+  width: 908px;
+  margin: 0 auto;
+}
+
+/*БЛОК С ОПИСАНИЕМ ВСЕХ ШРИФТОВ --- НАЧАЛО*/
+/*Шрифт по умолчанию - Lucida Sans Unicode, но некоторые элементы - Arial*/
+.phones, .menu_desc, .menu_count, .labels, .drop_lists, .product_price,
+.menu_footer, .copy_r{
+  font-family: Arial;
+}
+
+/*Шрифт для номеров телефонов с увеличенными межсимвольными интервалами*/
+.phones{
+  font-size: 18px;
+  color: #5e696d;
+}
+
+/*Размеры шрифтов для блока с логином и правой части горизонтального меню*/
+.login_input, .login_ref, .menu_desc{
+  font-size: 11px;
+}
+
+/*Отступы первой строки для инпутов в блоке логина*/
+.login_input{
+  text-indent: 5px;
+}
+
+/*Последняя ссылка идет с отступом и вразрядку*/
+.underlined{
+  text-indent: 18px;
+  letter-spacing: 0.05em;
+}
+
+/*А эта наоборот - со сжатием межбуквенных интервалов*/
+.condensed{
+  letter-spacing: -0.03em;
+}
+
+/*Ссылки в логин-блоке - белые и без подчеркивания (кроме последней)*/
+.login_ref, .login_ref a{
+  text-decoration: none;
+  color: white;
+}
+
+/*К вопросу об адекватности. Дизайнер в макете даже подчеркивание сделал криво -
+ниже на несколько пикселей. Можно сделать подчеркивание нижним бордером к этому
+же селектору, так будет немного ближе к макету, но все равно не 100%.
+Единственный вариант сделать этот кусок текста пиксель в пиксель - рисовать
+к нему подчеркивание бордером в отдельном блочном элементе.*/
+.underlined a{
+  text-decoration: underline;
+  color: #bfbfbf;
+}
+
+/*Убираем подчеркивание ссылкам и задаем дефолтный цвет тексту в меню*/
+.menu_bar, .menu a, .footer_menu, .footer_menu a{
+  text-decoration: none;
+  color: #b1bcc0;
+}
+
+/*Пункты меню заглавными и увеличенным шрифтом*/
+.menu{
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/*Текст в правой части меню*/
+.menu_desc{
+  letter-spacing: 0.03em;
+}
+
+/*Числа в правой части меню*/
+.menu_count{
+  font-size: 13px;
+  font-weight: bold;
+  color: #0d5a8f;
+}
+
+/*Шрифт заголовков в блоках поиска*/
+.titles{
+  font-family: Arial Black;
+  font-size: 13px;
+  letter-spacing: -0.03em;
+  color: #154467;
+}
+
+/*В первом блоке часть текста в заголовке идет уменьшенным шрифтом*/
+.undersized{
+  font-size: 11px;
+}
+
+/*Настройки шрифтов для блоков поиска*/
+.labels, .condensed_checkbox{
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 9px;
+}
+
+.drop_list{
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/*Серый текст в блоках поиска*/
+.grey_accent{
+  font-weight: normal;
+  color: #77858b;
+}
+
+/*Заголовки левой и правой колонок. По-хорошему, надо уменьшать h2
+в подзаголовках до 13px для единого стандарта.*/
+.title_h1, .title_h2{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  color: #114165;
+}
+
+.title_h2{
+  font-size: 14px;
+}
+
+/*Отдельный стиль для кружочков-буллетов в списках*/
+.circle{
+  font-weight: bold;
+  font-style: normal;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.links a, .column_checkbox > label{
+  color: #465961;
+  text-decoration: none;
+}
+
+.links > li:hover a{
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  color: #114165;
+}
+
+.links > li:hover .circle{
+  color: #114165;
+}
+
+.product_brand, .product_model, .product_price{
+  text-align: center;
+}
+
+.product_brand{
+  font-size: 15px;
+  font-weight: bold;
+  color: #206988;
+}
+
+.product_model{
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.product_price{
+  font-size: 16px;
+  font-weight: bolder;
+  font-style: italic;
+  color: #114165;
+}
+
+.uah{
+  font-size: 13px;
+}
+
+.copy_r{
+  font-size: 11px;
+  font-weight: bold;
+  color: #7f4740;
+  text-align: center;
+}
+/*БЛОК С ОПИСАНИЕМ ВСЕХ ШРИФТОВ --- КОНЕЦ*/
+
+
+header{
+  margin-top: 17px;
+}
+
+.phones, .login, .home_block{
+  display: flex;
+  float: left;
+  flex-direction: row;
+}
+
+.phones{
+  width: 294px;
+  margin-top: 5px;
+  justify-content: space-between;
+}
+
+.ph_number{
+  margin-top: 2px;
+}
+
+/*Во всех блоках с нерегулярными отступами между элементами, я отключал
+автоматическое выравнивание flex и делал отступы марджинами в самих элементах*/
+.login{
+  box-sizing: border-box;
+  justify-content: flex-start;
+  width: 495px;
+  height: 27px;
+  margin: 0 6px 10px 19px;
+  background: linear-gradient(to bottom, #1f6787, #0c3357);
+  border-top: 1px solid #a6c3cf;
+  border-bottom: 1px solid #4e647a;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*Я не совсем понял, почему, но внутри формы изображение растянулось
+на 100% по высоте, здесь я ему принудительно задаю оригинальную высоту.
+Думаю, что в последующих работах имеет смысл все иконки сразу делать
+с высотой, равной высоте родительского блока, это избавит от таких костылей,
+плюс сразу позволит подогнать выравнивание элементов еще на стадии
+графического редактора.*/
+.login_icon{
+  height: 18px;
+  margin: 4px 3px 0 7px;
+}
+
+.login_input{
+  box-sizing: border-box;
+  width: 115px;
+  height: 18px;
+  margin: 3px 7px 0 0;
+  border: none;
+  border: 1px solid #82949c;
+  border-radius: 2px;
+}
+
+/*Было несколько идей по поводу реализации кнопки "вход", которые я забраковал.
+
+Идея 1: сделать "вход" обычной ссылкой. Плохо потому, что это не будет работать
+как автоматическая передача данных формы, придется писать доп. костыль.
+
+Идея 2: надпись "вход" сделать сразу картинкой на сабмит-кнопке. Плохо потому,
+что есть большая (почти 100%) вероятность того, что шрифт на кнопке
+и на соседней надписи визуально будет разным.
+
+В итоге я остановился на таком варианте: надпись делается обычным текстом,
+но загоняется на слой ниже под полностью прозрачную сабмит-кнопку.
+Причем, оказалось достаточно прописать повышенный z-index только самой кнопке*/
+.invisible{
+  position: relative;
+  z-index: 2;
+}
+
+/*Сдвигаем надпись под прозрачную кнопку*/
+.under_button{
+  margin-left: -30px;
+}
+
+.login_ref, .login_ref a{
+  margin-top: 7px;
+  margin-right: 2px;
+}
+
+/*Блок иконок home/sitemap/email*/
+.home_block{
+  box-sizing: border-box;
+  justify-content: center;
+  width: 83px;
+  height: 27px;
+  margin-left: 10px;
+  border: 1px solid #bdc4c7;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*Отступы для иконок*/
+.home_element{
+  margin: 6px;
+}
+
+/*Меню состоит из двух вложенных флексов: подложка меню -> меню + корзина*/
+.menu_bar, .menu{
+  display: flex;
+  flex-direction: row;
+}
+
+/*Подложка для меню*/
+.menu_bar{
+  box-sizing: border-box;
+  height: 34px;
+  margin-top: 4px;
+  background: linear-gradient(to bottom, #505860, #2d3236 5px, #010101);
+  border: 1px solid #0d1642;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*Меню сайта*/
+.menu{
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+/*Паддинги элементов меню*/
+.menu > li{
+  padding: 9px 13px;
+}
+
+/*Выделение активного пункта меню*/
+.menu > li:hover{
+  background: linear-gradient(to bottom, #1f6787, #0c3357);
+  border-radius: 18px;
+}
+
+.menu > li:hover a{
+  color: white;
+}
+
+.footer_menu > li:hover a{
+  color: #52abcb;
+}
+
+/*Отступы для иконки корзины и ее текстовых блоков*/
+.basket{
+  margin: 7px 7px 0 170px;
+}
+
+.menu_desc{
+  margin-top: 12px;
+}
+
+.menu_count{
+  margin: 10px 14px 0 3px;
+}
+
+/*Секция из трех блоков поиска*/
+.search{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+/*Общий стиль блоков поиска: высота, граница и тень*/
+.car, .tire, .disk{
+  box-sizing: border-box;
+  height: 134px;
+  border: 1px solid #adadae;
+  border-radius: 18px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*Индивидуальная ширина для каждого блока*/
+.car{
+  width: 414px;
+}
+
+.tire{
+  width: 192px;
+}
+
+.disk{
+  width: 268px;
+}
+
+/*Контейнеры для элементов блоков поиска*/
+.car_wrapper, .tire_wrapper, .disk_wrapper, .disk_subwrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.car_wrapper{
+  margin: 7px 17px 0;
+}
+
+.tire_wrapper{
+  margin: 7px 0 0 17px;
+}
+
+.disk_wrapper{
+  margin: 0 17px 0;
+}
+
+.disk_subwrapper{
+  margin: 7px 0 0 0px;
+}
+
+.displacer{
+  margin: 15px 0 7px;
+}
+
+/*Единый отступ для заголовков блоков поиска. Хотя согласно кривому макету
+они все разные.*/
+.titles{
+  margin-top: 2px;
+}
+
+/*Кастомная настройка заголовка левого блока*/
+.car_title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 17px;
+  margin-right: 17px;
+}
+
+/*Стили для выпадающих списков левого блока и их описаний*/
+.labels, .drop{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 86px;
+}
+
+.labels{
+  margin-top: 7px;
+}
+
+.labels > li{
+  margin: -2px 0 8px;
+}
+
+/*Настройки выпадающих списков и их элементов*/
+.drop{
+  margin: 0 30px 0 5px;
+}
+
+.drop > li{
+  margin: -2px 0 6px;
+}
+
+.drop_list{
+  height: 18px;
+}
+
+.long{
+  width: 100px;
+}
+
+.short{
+  width: 50px;
+}
+
+/*Сабмит-кнопка для блоков поиска, сделал картинкой*/
+.search_submit{
+  float: right;
+  margin: -2px 20px 0 0;
+}
+
+/*В макете заголовки центрального и правого блока не отцентрованы, но по логике
+должны быть*/
+.centered{
+  text-align: center;
+}
+
+/*Настройка расположения меток в центральном и правом блоках*/
+.tire_labels{
+  text-align: right;
+}
+
+.tire_labels > li{
+  margin-bottom: 12px;
+}
+
+.disk_labels{
+  margin-top: 6px;
+}
+
+.disk_labels > li{
+  margin-bottom: 6px;
+}
+
+/*Оверрайд марджинов не самое элегантное решение, но зато позволяет наследовать
+все остальные свойства родительских стилей*/
+.custom_margin{
+  margin: 2px 0 0 6px;
+  justify-content: flex-start;
+}
+
+.reduced_top_margin{
+  margin-top: -4px;
+}
+
+.reduced_right_margin{
+  margin-right: 6px;
+}
+
+/*Кастомные чекбоксы и метки для них*/
+.seasons, .brands{
+  width: 11px;
+  height: 11px;
+  margin: -1px 0 0 0;
+}
+
+.brands{
+  margin: 0;
+}
+
+.condensed_checkbox{
+  display: block;
+  height: 10px;
+}
+
+.condensed_checkbox > label, .column_checkbox > label{
+  vertical-align: top;
+}
+
+/*Увеличенный интерлиньяж для столбца выпадающих списков в правом блоке*/
+.extended_spacing > li{
+  margin: -2px 0 15px 0;
+}
+
+/*Вертикальный разделитель в правом блоке поиска*/
+.v_line{
+  height: 106px;
+  margin: 2px 12px 0;
+  border-left: 1px solid #bdc6ca;
+}
+
+.main_wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 19px;
+}
+
+.column_title, .column_subtitle{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  width: 183px;
+  height: 28px;
+  margin-bottom: 20px;
+  border: 1px solid #79878d;
+  border-radius: 18px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.column_subtitle{
+  width: 140px;
+  margin: 0px 0 10px 23px;
+}
+
+.list_icon, .tire_icon{
+  height: 23px;
+  margin: 1px 0 0 2px;
+}
+
+.title_h1, .title_h2{
+  margin: 6px 0 0 2px;
+}
+
+.links, .ch_boxes{
+  margin: 0 0 20px 40px;
+}
+
+.links > li, .column_checkbox{
+  margin-bottom: 10px;
+}
+
+.ch_boxes{
+  margin: 0 0 20px 37px;
+}
+
+.select_button{
+  margin: -3px 0 0 26px;
+}
+
+.central, .product_row{
+  display: flex;
+  justify-content: space-around;
+}
+
+.central{
+  flex-direction: column;
+  width: 525px;
+  height: 627px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #e5e7e8, #93a7b0);
+  border-radius: 4px;
+}
+
+.product_row{
+  flex-direction: row;
+}
+
+.product_img{
+  display: block;
+  width: 138px;
+  height: 128px;
+  border: 1px solid #a4aeb1;
+  border-radius: 8px;
+}
+
+.product_price{
+  margin-top: 3px;
+}
+
+.brands_banner{
+  display: block;
+  width: 676px;
+  height: 27px;
+  margin: 35px auto 0;
+}
+
+footer{
+  overflow-y: hidden;
+}
+
+.contacts{
+  background-color: #213a4d;
+  margin-top: 25px;
+  padding-bottom: 2000px;
+  margin-bottom: -2000px;
+}
+
+.footer_menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 12px;
+}
+
+.footer_menu > li{
+  margin: 0 5px;
+}
+
+.copy_r{
+  margin-top: 15px;
+  margin-bottom: 25px;
+}

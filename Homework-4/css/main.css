@@ -1,0 +1,277 @@
+html, body{
+  height: 100%;
+
+  font: normal 9pt/9pt Tahoma;
+}
+
+.background{
+  position: fixed;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+}
+
+.backhead{
+  height: 28px;
+
+  border-bottom: solid 1px #5ef0ff;
+  background-color: #128aa7;
+}
+
+/*Градиенты немного неравномерные, постарался подогнать их точнее,
+задав средние точки, чтобы сделать все только через CSS, без фоновых картинок*/
+.backmain{
+  height: 146px;
+
+  background: linear-gradient(to bottom, #11cde1, #8ae6f0 73px, #ffffff);
+}
+
+.backrest{
+  height: 100%;
+
+  background: linear-gradient(to bottom, #40c6d3, #1191b1 150px, #0c739f);
+}
+
+.container{
+  position: relative;
+
+  width: 1000px;
+  margin: 0 auto;
+
+  background-color: white;
+  box-shadow: 0 0 7px black;
+}
+
+.logo{
+  float: left;
+
+  width: 282px;
+  height: 64px;
+}
+
+.logo_img{
+  position: absolute;
+
+  padding: 11px 0 0 28px;
+}
+
+.motto{
+  position: relative;
+
+  padding: 109px 0 0 36px;
+
+  text-align: center;
+}
+
+.motto, .contacts, .email, a{
+  color: #128aa7;
+}
+
+/*Убираем подчеркивание с e-mail, а также со ссылок во всех меню*/
+.email, .menu li > a{
+  text-decoration: none;
+}
+
+.contacts{
+  padding: 8px 0 0 842px;
+
+  font: normal 9pt/13pt Tahoma;
+}
+
+.head{
+  margin-bottom: 4px;
+
+  font: bold 9pt/13pt Tahoma;
+}
+
+.countries{
+  display: flex;
+  flex-direction: row;
+
+  padding: 32px 0 0 632px;
+}
+
+.country{
+  display: block;
+
+  width: 57px;
+
+  text-align: center;
+
+  font: normal 7.5pt/8pt Tahoma;
+}
+
+.pan_photo{
+  margin: 10px auto 0;
+
+  border-top: 1px solid #128aa7;
+  border-bottom: 1px solid #128aa7;
+}
+
+.menu li > a{
+  color: white;
+
+  font: normal 10.5pt/10pt Tahoma;
+}
+
+/*Чуть подгоняем по размеру стрелку вниз*/
+.triangle{
+  font: normal 8.5pt/10pt Tahoma;
+}
+
+/*Панель под меню делаем отдельно, т.к. flex-блок с элементами
+имеет отступы по краям*/
+.central_panel{
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  height: 28px;
+
+  /*Я не знаю, зачем в макете у меню верхний отступ в 1 пиксель сверху,
+  выглядит как ошибка, сделал без него, если понадобится этот отступ,
+  достаточно закомментировать следующую строку*/
+  margin: -1px 0;
+
+  border-bottom: 1px solid #000000;
+  background: linear-gradient(to bottom, #373737, #303030);
+  box-shadow: 0 0 5px;
+}
+
+/*Делаем боковые отступы меню, выравниваем элементы*/
+.menu{
+  display: flex;
+  flex-direction: row;
+
+  width: 93%;
+  height: 100%;
+  margin: 0 auto;
+
+  /*Центровочка пунктов меню*/
+  padding-top: 6px;
+
+  justify-content: space-around;
+}
+
+/*В явном виде прописываем габариты пунктов горизонтального меню,
+чтобы выпадающее приклеивалось по нижней границе, а не по краю текста,
+приятный побочный эффект - увеличивается площадь попадания курсором в ссылку :)*/
+.menu > li > a{
+  display: block;
+
+  height: 28px;
+}
+
+/*Выпадающее меню по умолчанию невидимое, но при наведении на пункт
+горизонтального меню, начинает отрисовываться как flex, поэтому направление
+флекса и выравнивание контента прописаны заранее*/
+.dropmenu{
+  position: absolute;
+
+  display: none;
+  flex-direction: column;
+  /*Компенсируем паддинги пунктов выпадающего меню, чтобы не было разрыва
+  между горизонтальным меню и выпадающими, а также, чтобы пункты родительского
+  и дочернего меню были выровнены по горизонтали по левому краю*/
+
+  margin: -6px 0 0 -10px;
+
+  border-top: 1px solid #000000;
+  background-color: #303030;
+  box-shadow: 1px 1px 5px;
+
+  justify-content: center;
+}
+
+.dropmenu > li{
+  height: 20px;
+  margin: 4px 0 -4px;
+  padding: 3px 10px;
+}
+
+/*Небольшой костылик для подгонки выпадающего меню под макет*/
+.dropmenu > li:last-child{
+  padding-bottom: 8px;
+}
+
+/*Активация выпадающего меню*/
+ul.menu > li:hover > ul.dropmenu{
+  display: flex;
+}
+
+/*Описываем контейнер для колонок*/
+.main_block{
+  position: relative;
+  z-index: 1;
+
+  overflow: hidden;
+}
+
+.content{
+  float: left;
+
+  box-sizing: border-box;
+  width: 580px;
+  height: 100%;
+  padding: 20px 15px 20000px;
+  margin-bottom: -20000px;
+
+  /*Заранее прописываем шрифт для контента центральной колонки, на случай,
+  если там понадобится что-нибудь написать*/
+  font: normal 12pt/12pt tahoma;
+}
+
+/*Боковые панели одинаковые, группируем их стили*/
+.panel{
+  float: left;
+
+  box-sizing: border-box;
+  width: 210px;
+  height: 100%;
+  padding: 0 15px 20000px;
+  margin: 1px 0 -20000px 0;
+
+  border-right: 1px solid #c7cacf;
+  border-left: 1px solid #c7cacf;
+  background-color: #edeef0;
+}
+
+.panel > h1{
+  padding: 10px 0;
+
+  text-align: center;
+
+  font: bold 13pt/14pt tahoma;
+}
+
+.unit{
+  padding: 4px 0;
+  margin-bottom: 2px;
+
+  border-bottom: 1px solid #c7cacf;
+
+  font: normal 11pt/12pt tahoma;
+}
+
+/*Решил, что без подчеркивания последней новости будет красивее*/
+.unit:last-of-type{
+  border-bottom: none;
+}
+
+.unit > h2{
+  padding: 0 0 4px 0;
+
+  font: bold 11pt/12pt tahoma;
+}
+
+footer{
+  position: relative;
+
+  padding: 10px 0 0 0;
+
+  text-align: center;
+
+  color: #ffffff;
+}
