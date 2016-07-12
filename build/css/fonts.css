@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'aparajitaregular';
+    src: url('../fonts/aparaj-webfont.woff2') format('woff2'),
+         url('../fonts/aparaj-webfont.woff') format('woff'),
+         url('../fonts/aparaj-webfont.ttf') format('truetype'),
+         url('../fonts/aparaj-webfont.svg#aparajitaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aparajitabold';
+    src: url('../fonts/aparajb-webfont.woff2') format('woff2'),
+         url('../fonts/aparajb-webfont.woff') format('woff'),
+         url('../fonts/aparajb-webfont.ttf') format('truetype'),
+         url('../fonts/aparajb-webfont.svg#aparajitabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
