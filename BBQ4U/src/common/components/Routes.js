@@ -7,7 +7,7 @@ import HomePage from '../../pages/bbq4u/bbq4u';
 
 
 export default (
-  <Route path="./bbq4u/build/" component={App}>
+  <Route path="bbq4u/build/" component={App}>
     <IndexRoute component={HomePage} />
   </Route>
 );
