@@ -7,7 +7,11 @@ import HomePage from '../../pages/bbq4u/bbq4u';
 
 
 export default (
-  <Route path="http://bootreen.github.io/bbq4u/build/" component={App}>
-    <IndexRoute component={HomePage} />
+  <Route path="bbq4u">
+    <Route path="build">
+      <Route path="/" component={App}>
+        <IndexRoute component={HomePage} />
+      </Route>
+    </Route>
   </Route>
 );
