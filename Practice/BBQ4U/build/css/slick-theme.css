@@ -75,6 +75,7 @@
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
 }
 
 .slick-prev
@@ -122,7 +123,7 @@
 .slick-dots
 {
     position: absolute;
-    bottom: -40px;
+    bottom: -4em;
 
     display: block;
 

@@ -1,0 +1,112 @@
+.application-title {
+  margin-top: 15px;
+  text-align: center;
+  font: bold small-caps 24px/24px Tahoma;
+}
+
+.main-container {
+  width: 1536px;
+  display: block;
+  margin: 30px auto;
+}
+
+.game-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.field-element {
+  width: 64px;
+  height: 64px;
+  background-image: url('../img/tiles.png');
+  background-color: black;
+}
+
+.footer-container {
+  width: 1536px;
+  display: block;
+  margin: 30px auto;
+  background-color: black;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.menu-selector {
+  width: 700px;
+  height: 70px;
+  margin-right: 50px;
+  background-image: url('../img/tiles.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.menu-selector-element {
+  width: 54px;
+  height: 54px;
+  margin-right: 5px;
+  align-self: center;
+  border: 5px solid rgba(0, 0, 0, 0);;
+}
+
+.menu-selector-element-active {
+  border: 5px solid red;
+}
+
+.menu-button {
+  height: 30px;
+  align-self: center;
+  margin-right: 10px;
+}
+
+.tile-void {
+  background-position: -630px 0;
+}
+
+.tile-rock {
+  background-position: 0 0;
+}
+
+.tile-sand {
+  background-position: -70px 0;
+}
+
+.tile-sand_wet {
+  background-position: -140px 0;
+}
+
+.tile-soil_dry {
+  background-position: -210px 0;
+}
+
+.tile-soil {
+  background-position: -280px 0;
+}
+
+.tile-soil_rich {
+  background-position: -350px 0;
+}
+
+.tile-water_1-3 {
+  background-position: -420px 0;
+}
+
+.tile-water_2-3 {
+  background-position: -490px 0;
+}
+
+.tile-water {
+  background-position: -560px 0;
+}

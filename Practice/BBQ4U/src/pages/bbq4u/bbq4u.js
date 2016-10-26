@@ -117,7 +117,7 @@ var Article_2 = React.createClass({
           <li className='article__list_item'><span className='accent_strong'>Power supplie</span>: 3xAA batteries (included)</li>
           <li className='article__list_item'><span className='accent_strong'>Material</span>: high quality heat-resistant ABS plastic</li>
           <li className='article__list_item'><span className='accent_strong'>Color</span>: black</li>
-          <li className='article__list_item'><span className='accent_strong'>3 mode brightness regulation</span>: 10% – 75% – 100%</li>
+          <li className='article__list_item'><span className='accent_strong'>3 mode brightness regulation</span>: 10% - 75% - 100%</li>
           <li className='article__list_item'><span className='accent_strong'>Luminous</span>:  100 lumen</li>
         </ul>
       </article>
