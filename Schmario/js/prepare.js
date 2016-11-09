@@ -1,35 +1,32 @@
 "use strict";
 
-var spriteSheets = loadImages(["./img/smario-sheet.png", "./img/backgrounds.png", "./img/enemies.png", "./img/bricks.png", "./img/monster-sprite.png"]);
+var spriteSheets = loadImages(["./img/smario-sheet.png", "./img/backgrounds.png", "./img/enemies.png", "./img/bricks.png"]);
 
+// Загрузчик ресурсов на промисах
+// loadImages получает массив ссылок на файлы и преобразует его в массив промисов loadTries,
+// который передается в Promise.all. Если все промисы выполнились, функция возвращает
+// массив объектов Img. Если хотя бы один промис отклонен, возвращает false.
 function loadImages(imageLinks) {
+  var loadTries = imageLinks.map(function(currentLink) {
+    return new Promise(function(resolve, reject) {
+      var currentImage = new Image();
+      currentImage.src = currentLink;
+      currentImage.onload = function() {
+        resolve(currentImage);
+      };
+      currentImage.onerror = function() {
+        reject();
+      }
+    })
+  })
 
-  var onLoadError = false;
-
-  var loadedImages = imageLinks.map(function(imageLink) {
-    var currentImage = new Image();
-    currentImage.src = imageLink;
-    currentImage.onerror = function() {
-      onLoadError = true;
-      throw null;
-    }
-    console.log(currentImage, onLoadError);
-    return currentImage;
-  });
-
-  Promise.all(loadedImages).then(function() {
-    if (!onLoadError) {
-      loadedImages.unshift(true);
-      console.log(loadedImages);
-      return loadedImages;
-    }
-  }).catch(function() {
-    loadedImages.unshift(false);
-    console.log(loadedImages);
+  Promise.all(loadTries).then(function(loadedImages) {
     return loadedImages;
+  }).catch(function() {
+    return false;
   });
 
-};
+}
 
 
 // Заглушка под спрайты
