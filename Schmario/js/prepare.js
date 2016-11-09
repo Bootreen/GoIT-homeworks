@@ -1,33 +1,21 @@
 "use strict";
 
-var spriteSheets = loadImages(["./img/smario-sheet.png", "./img/backgrounds.png", "./img/enemies.png", "./img/bricks.png"]);
+var paths = ["./img/mario-sheet.png", "./img/backgrounds.png", "./img/enemies.png", "./img/bricks.png"];
 
-// Загрузчик ресурсов на промисах
-// loadImages получает массив ссылок на файлы и преобразует его в массив промисов loadTries,
-// который передается в Promise.all. Если все промисы выполнились, функция возвращает
-// массив объектов Img. Если хотя бы один промис отклонен, возвращает false.
-function loadImages(imageLinks) {
-  var loadTries = imageLinks.map(function(currentLink) {
-    return new Promise(function(resolve, reject) {
-      var currentImage = new Image();
-      currentImage.src = currentLink;
-      currentImage.onload = function() {
-        resolve(currentImage);
-      };
-      currentImage.onerror = function() {
-        reject();
-      }
-    })
+function loadImg(path) {
+  return new Promise(function(resolve, reject) {
+    var img = new Image();
+    img.src = path;
+    img.onload = function() {resolve(img)};
+    img.onerror = reject;
   })
+};
 
-  Promise.all(loadTries).then(function(loadedImages) {
-    return loadedImages;
-  }).catch(function() {
-    return false;
-  });
-
-}
-
+Promise.all(paths.map(loadImg))
+// .then(init);
+// .catch(errorHandler);
+.then(r => console.log(r))
+.catch(e => console.log("Мы все умрем!!! ", e));
 
 // Заглушка под спрайты
 function sprite (options) {
