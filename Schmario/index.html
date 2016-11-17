@@ -7,7 +7,37 @@
   <link rel="stylesheet" href="css/style.css" charset="utf-8">
 </head>
 <body>
-  <script src="js/prepare.js" charset="utf-8"></script>
+  <!-- Стили на скорую руку, доводить до ума будем потом -->
+  <div class="wrapper">
+    <header class="upper-bar">
+      <div class="labels-container">
+        <span class="stat-label">score</span>
+        <span class="stat-label">time</span>
+        <span class="stat-label">coins</span>
+        <span class="stat-label">lives</span>
+      </div>
+      <div class="counters-container">
+        <span class="stat-counter" id="score">0</span>
+        <span class="stat-counter" id="time">0</span>
+        <span class="stat-counter" id="coins">0</span>
+        <span class="stat-counter" id="lives">0</span>
+      </div>
+    </header>
+    <main class="main-block">
+      <canvas class="game-field" id="canvas">
+        Ваш браузер не поддерживает HTML5 Canvas. Убейте себя об стену.
+        Your browser doesn't support HTML5 Canvas. Kill yourself, make the world better.
+      </canvas>
+    </main>
+    <footer class="lower-bar">
+      <p class="instructions">
+        Controls: WASD or arrows, Space - jump, Ctrl - run, Shift - fire
+      </p>
+      <p class="instructions">
+        P - pause, R - restart game
+      </p>
+    </footer>
+  </div>
   <script src="js/schmario.js" charset="utf-8"></script>
 </body>
 </html>
