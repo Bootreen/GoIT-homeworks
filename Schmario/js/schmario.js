@@ -1,25 +1,50 @@
 "use strict";
 
-// Небольшая реструктуризация, оформляем по-человечески,
-// избавляемся от глобальных переменных.
-// Остальные комменты потом.
-
 var gameApp = function() { // Переменные, константы, прочие данные
-  this.canvas = document.getElementById('canvas');
-  this.gameField = this.canvas.getContext('2d');
-  this.C_WIDTH = 1280;
-  this.C_HEIGHT = 720;
 
+  // Характеристики Canvas
+  this.canvas = document.getElementById('canvas'),
+  this.gameField = this.canvas.getContext('2d'),
+  this.C_WIDTH = 1280,
+  this.C_HEIGHT = 720,
+
+  // Размеры и координаты
+  this.BRICK_HEIGHT, this.BRICK_WIDTH, this.AVA_WIDTH = 48,
+  this.AVA_HEIGHT = 84,
+  this.AVA_START_X = 624,
+  this.AVA_START_Y = 636,
+
+  // Пути к графике
   this.paths = ["./img/background.jpg", "./img/mario.png", "./img/bricks.png", "./img/coin.png",
                 "./img/mushroom.png", "./img/turtle.png", "./img/evil-flower.png", "./img/fire.png",
-                "./img/flag.png", "./img/bonuses.png"];
+                "./img/flag.png", "./img/bonuses.png"],
 
-  this.background = new Image();
+  // Пауза и интевал ее проверки
+  this.isPaused = false,
+  this.PAUSE_CHECK_INTERVAL = 200;
+
+  // FPS и чекпойнты
+  this.fps = 0,
+  this.lastAnimationFrameTime = 0,
+  this.lastFpsUpdateTime = 0
+
 };
 
-gameApp.prototype = {
+gameApp.prototype = { // Методы
 
-  loadImg: function(path) { // Загрузчик спрайтшитов
+  init: function() {
+    // Пакетная загрузка спрайтшитов
+    Promise.all(this.paths.map(this.loadImg))
+    .then(result => {
+      // Перезаписываем пути указателями на закэшированные изображения
+      this.paths = result.slice();
+      this.start();
+    })
+    // .catch(error => errorHandler(error));
+    .catch(error => console.log(error));
+  },
+
+  loadImg: function(path) { // Загрузчик на промисах
     return new Promise(function(resolve, reject) {
       var img = new Image();
       img.src = path;
@@ -28,17 +53,7 @@ gameApp.prototype = {
     });
   },
 
-  init: function() {
-    Promise.all(this.paths.map(this.loadImg))
-    .then(result => {
-      this.paths = result.slice();
-      this.start();
-    })
-    // .catch(errorHandler);
-    // .then(result => console.log(result))
-    .catch(error => console.log(error));
-  },
-
+  // Инициализайия параметров, запуск лупа
   start: function() {
     this.canvas.width = this.C_WIDTH;
     this.canvas.height = this.C_HEIGHT;
@@ -47,28 +62,67 @@ gameApp.prototype = {
     this.gameLoop();
   },
 
+  // Основной луп + автопауза при потере фокуса активным окном
   gameLoop: function (now) {
-    schmario.draw(now);
-    requestAnimationFrame(schmario.gameLoop);
+    if (schmario.isPaused) {
+      setTimeout(function () {
+        requestAnimationFrame(schmario.gameLoop);
+      }, schmario.PAUSE_CHECK_INTERVAL);
+    }
+    else {
+      schmario.fps = schmario.currentFps(now);
+      schmario.render(now);
+      requestAnimationFrame(schmario.gameLoop);
+    }
   },
 
-  draw: function (now) {
-    this.drawBackground();
+  // Отрисовка всего
+  render: function (now) {
+    this.renderBackground();
     // this.drawBricks();
     // this.drawEniemies();
     // this.drawBonuses();
-    this.drawAvatar();
+    this.renderAvatar();
   },
 
-  drawBackground: function () {
+  // Задник
+  renderBackground: function () {
     this.gameField.drawImage(this.background, 0, 0);
   },
 
-  drawAvatar: function () {
-    this.gameField.drawImage(this.avatar, 0, 0, 48, 84, 624, 636, 48, 84);
-  }
+  // Шмарио
+  renderAvatar: function () {
+    this.gameField.drawImage(this.avatar, 0, 0, this.AVA_WIDTH, this.AVA_HEIGHT,
+                             this.AVA_START_X, this.AVA_START_Y, this.AVA_WIDTH, this.AVA_HEIGHT);
+  },
+
+  // Расчет FPS, в дальнейшем используется для FPS-независимой анимации
+  currentFps: function (now) {
+    var fps = 1000 / (now - this.lastAnimationFrameTime);
+    this.lastAnimationFrameTime = now;
+    this.lastFpsUpdateTime = (now - this.lastFpsUpdateTime > 1000) ? now : this.lastFpsUpdateTime;
+    return (this.lastAnimationFrameTime === 0) ? 60 : fps;
+
+    // if (this.lastAnimationFrameTime === 0) {
+    //   this.lastAnimationFrameTime = now;
+    //   return 60;
+    // };
+    //
+    // if (now - this.lastFpsUpdateTime > 1000) {
+    //   this.lastFpsUpdateTime = now;
+    // }
+    // return fps;
+  },
 
 }
+
+window.onblur = function () {
+  schmario.isPaused = true;
+};
+
+window.onfocus = function () {
+  schmario.isPaused = false;
+};
 
 var schmario = new gameApp();
 schmario.init();
