@@ -4,7 +4,7 @@ var gameApp = function() { // Переменные, константы, проч
 
   // Характеристики Canvas
   this.canvas = document.getElementById('canvas'),
-  this.gameField = this.canvas.getContext('2d'),
+  this.gameScreen = this.canvas.getContext('2d'),
   this.C_WIDTH = 1280,
   this.C_HEIGHT = 720,
 
@@ -15,9 +15,7 @@ var gameApp = function() { // Переменные, константы, проч
   this.AVA_START_Y = 636,
 
   // Пути к графике
-  this.paths = ["./img/background.jpg", "./img/mario.png", "./img/bricks.png", "./img/coin.png",
-                "./img/mushroom.png", "./img/turtle.png", "./img/evil-flower.png", "./img/fire.png",
-                "./img/flag.png", "./img/bonuses.png"],
+  this.paths = ["./img/background.jpg", "./img/sprites.png"],
 
   // Пауза и интевал ее проверки
   this.isPaused = false,
@@ -53,7 +51,7 @@ gameApp.prototype = { // Методы
     });
   },
 
-  // Инициализайия параметров, запуск лупа
+  // Инициализация параметров, запуск лупа
   start: function() {
     this.canvas.width = this.C_WIDTH;
     this.canvas.height = this.C_HEIGHT;
@@ -87,12 +85,12 @@ gameApp.prototype = { // Методы
 
   // Задник
   renderBackground: function () {
-    this.gameField.drawImage(this.background, 0, 0);
+    this.gameScreen.drawImage(this.background, 0, 0);
   },
 
   // Шмарио
   renderAvatar: function () {
-    this.gameField.drawImage(this.avatar, 0, 0, this.AVA_WIDTH, this.AVA_HEIGHT,
+    this.gameScreen.drawImage(this.avatar, 12, 108, this.AVA_WIDTH, this.AVA_HEIGHT,
                              this.AVA_START_X, this.AVA_START_Y, this.AVA_WIDTH, this.AVA_HEIGHT);
   },
 
@@ -102,16 +100,6 @@ gameApp.prototype = { // Методы
     this.lastAnimationFrameTime = now;
     this.lastFpsUpdateTime = (now - this.lastFpsUpdateTime > 1000) ? now : this.lastFpsUpdateTime;
     return (this.lastAnimationFrameTime === 0) ? 60 : fps;
-
-    // if (this.lastAnimationFrameTime === 0) {
-    //   this.lastAnimationFrameTime = now;
-    //   return 60;
-    // };
-    //
-    // if (now - this.lastFpsUpdateTime > 1000) {
-    //   this.lastFpsUpdateTime = now;
-    // }
-    // return fps;
   },
 
 }
