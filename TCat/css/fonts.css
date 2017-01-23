@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Gabriola';
+  src: url('../fonts/Gabriola/Gabriola.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Gabriola/Gabriola.woff') format('woff'),
+       url('../fonts/Gabriola/Gabriola.ttf')  format('truetype'),
+       url('../fonts/Gabriola/Gabriola.svg#Gabriola') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'TrebuchetMS';
+  src: url('../fonts/TrebuchetMS/TrebuchetMS.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/TrebuchetMS/TrebuchetMS.woff') format('woff'),
+       url('../fonts/TrebuchetMS/TrebuchetMS.ttf')  format('truetype'),
+       url('../fonts/TrebuchetMS/TrebuchetMS.svg#TrebuchetMS') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

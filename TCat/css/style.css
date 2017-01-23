@@ -1,0 +1,285 @@
+body {
+  background-color: black;
+  color: #e2ab18;
+  font: normal 100% trebuchetms;
+}
+
+a {
+  color: #189de2;
+}
+
+header {
+  background-image: url(../img/header-background800.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.header-wrapper {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.logo {
+  width: 150px;
+}
+
+.logo-img {
+  width: 100%;
+}
+
+.menu-wrapper {
+  width: 130px;
+  margin-top: 6px;
+}
+
+.motto {
+  font: normal 220% gabriola;
+  line-height: 95%;
+  text-align: right;
+}
+
+.main-menu-desktop {
+  display: none;
+}
+
+main {
+  padding-top: 16px;
+  background-image: url(../img/background800.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.main-menu-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.menu-mobile-item {
+  width: 300px;
+  height: 32px;
+  margin: 0 auto 8px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(239, 80, 35, 0.6);
+  border-radius: 5px;
+  box-shadow: 0 0 7px 0 rgba(239, 80, 35, 0.6);
+}
+
+.menu-mobile-item__text {
+  font-size: 130%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.feedback {
+  width: 300px;
+  margin: 16px auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(239, 80, 35, 0.6);
+  border-radius: 5px;
+  box-shadow: 0 0 7px 0 rgba(239, 80, 35, 0.6);
+}
+
+.feedback__title {
+  color: #ef5023;
+  text-align: center;
+  text-shadow: 0 0 2px black;
+}
+
+.feedback__title-text {
+  font: normal 180% gabriola;
+}
+
+.feedback__wrapper {
+  width: 280px;
+  margin: 0 auto 16px auto;
+  border-bottom: 1px solid #ef5023;
+}
+
+.feedback-thumb {
+  float: left;
+}
+
+.feedback-thumb__img {
+  width: 24px;
+}
+
+.feedback-text {
+  margin-left: 42px;
+  font-size: 80%;
+}
+
+.feedback-author {
+  margin-top: -5px;
+  text-align: right;
+  color: #ef5023;
+  font: normal 120% gabriola;
+}
+
+footer {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  display: block;
+  text-align: center;
+  font: normal 85% gabriola;
+  color: #ef5023;
+}
+
+@media (min-width: 480px) {
+
+  .header-wrapper {
+    padding: 8px 0;
+  }
+
+  .logo {
+    width: 220px;
+  }
+
+  .logo-img {
+    width: 80%;
+  }
+
+  .menu-wrapper {
+    width: 180px;
+    margin-top: 4px;
+  }
+
+  .motto {
+    font-size: 260%;
+    line-height: 100%;
+  }
+
+  .main-menu-mobile {
+    flex-direction: row;
+    width: 410px;
+    margin: 0 auto;
+  }
+
+  .menu-mobile-item {
+    width: 120px;
+    height: 64px;
+  }
+
+  .feedback {
+    width: 410px;
+  }
+
+  .feedback__title-text {
+    font: normal 200% gabriola;
+  }
+
+  .feedback__wrapper {
+    width: 390px;
+    margin: 0 auto 20px auto;
+  }
+
+  .feedback-thumb__img {
+    width: 30px;
+  }
+
+  .feedback-text {
+    margin-left: 50px;
+    font-size: 100%;
+  }
+
+  .feedback-author {
+    font-size: 130%;
+  }
+
+  footer {
+    width: 410px;
+  }
+
+  .footer-text {
+    font-size: 100%;
+  }
+
+}
+
+@media (min-width: 800px) {
+
+  .logo {
+    width: 250px;
+  }
+
+  .logo-img {
+    width: 85%;
+  }
+
+  .menu-wrapper {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+
+  .motto {
+    font-size: 290%;
+  }
+
+  .main-menu-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu-desktop-item {
+    margin-top: -6px;
+  }
+
+  .menu-desktop-item__text {
+    text-decoration: underline;
+    font-size: 130%;
+  }
+
+  .main-menu-mobile {
+    display: none;
+  }
+
+  .feedback {
+    width: 410px;
+  }
+
+  .feedback__title-text {
+    font: normal 200% gabriola;
+  }
+
+  .feedback__wrapper {
+    width: 390px;
+    margin: 0 auto 20px auto;
+  }
+
+  .feedback-thumb__img {
+    width: 30px;
+  }
+
+  .feedback-text {
+    margin-left: 50px;
+    font-size: 100%;
+  }
+
+  .feedback-author {
+    font-size: 130%;
+  }
+
+  footer {
+    width: 410px;
+  }
+
+  .footer-text {
+    font-size: 100%;
+  }
+
+}
