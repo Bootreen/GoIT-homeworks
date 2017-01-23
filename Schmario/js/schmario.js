@@ -9,8 +9,9 @@ var gameApp = function() { // Переменные, константы, проч
   this.C_HEIGHT = 720,
 
   // Размеры и координаты
-  this.BRICK_HEIGHT, this.BRICK_WIDTH, this.AVA_WIDTH = 48,
-  this.AVA_HEIGHT = 84,
+  this.GRID_STEP = 12;
+  this.BRICK_HEIGHT, this.BRICK_WIDTH, this.AVA_WIDTH = this.GRID_STEP*4,
+  this.AVA_HEIGHT = this.GRID_STEP*7,
   this.AVA_START_X = 624,
   this.AVA_START_Y = 636,
 
@@ -90,8 +91,8 @@ gameApp.prototype = { // Методы
 
   // Шмарио
   renderAvatar: function () {
-    this.gameScreen.drawImage(this.avatar, 12, 108, this.AVA_WIDTH, this.AVA_HEIGHT,
-                             this.AVA_START_X, this.AVA_START_Y, this.AVA_WIDTH, this.AVA_HEIGHT);
+    this.gameScreen.drawImage(this.avatar, this.GRID_STEP, this.GRID_STEP*9, this.AVA_WIDTH, this.AVA_HEIGHT,
+                              this.AVA_START_X, this.AVA_START_Y, this.AVA_WIDTH, this.AVA_HEIGHT);
   },
 
   // Расчет FPS, в дальнейшем используется для FPS-независимой анимации
