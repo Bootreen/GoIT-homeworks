@@ -1,0 +1,18 @@
+body {
+  font: normal 100% Calibri;
+}
+
+.wrapper {
+  width: 600px;
+  margin: 10px auto;
+}
+
+#stdin {
+  display: block;
+  margin: 8px 0 8px 0;
+}
+
+h1 {
+  padding: 2px;
+  font: bold 150% Calibri;
+}
