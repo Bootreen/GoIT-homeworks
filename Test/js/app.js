@@ -2,12 +2,10 @@
 
 (function init() {
 
-  var sheet = new Map();
-
   var inoutArea = document.getElementById('stdin'),
       submitButton = document.getElementById('submit');
 
-  submitButton.onclick = () => parse(inoutArea.value);
+  submitButton.onclick = () => run();
 
   // Custom TAB handler for spreadsheet to prevent focus loss by textarea
   inoutArea.onkeydown = () => {
@@ -24,76 +22,95 @@
     }
   }
 
+  function run() {
+    inoutArea.value = unparse(calculate(parse(inoutArea.value)));
+  }
+
   function parse(input) {
-    const sheetSizeFormat = /\d+\t\d+\n/,
-          anySubstring = '[^\\s]+';
-
-    if (input) {
-      if (sheetSizeFormat.test(input)) {
-        var sheetCols = input.match(/\d+/g)[0];
-        var sheetRows = input.match(/\d+/g)[1];
-        // Sheet format dynamic regexp
-        var reTemplate = '';
-        for (var row=1; row < sheetRows; row++) {
-          reTemplate = reTemplate + anySubstring;
-          for (var col=1; col < sheetCols; col++) {
-            reTemplate = reTemplate + '\\t' + anySubstring;
-          }
-          reTemplate = reTemplate + '\\n';
-        }
-        reTemplate = reTemplate + anySubstring;
-        for (var col=1; col < sheetCols; col++) {
-          reTemplate = reTemplate + '\\t' + anySubstring;
-        }
-        var sheetFormat = new RegExp(reTemplate);
-        console.log(sheetFormat);
-
-        var sheetPreParsed = input.replace(sheetSizeFormat, '');
-        console.log(sheetPreParsed.match(sheetFormat));
-        // Declared sheet size validation
-        if (sheetPreParsed.match(sheetFormat) == sheetPreParsed.match(sheetFormat).input) {
-          sheetPreParsed = sheetPreParsed.split(/\t|\n/g);
-          sheetPreParsed.forEach(function(item, i, sheetArray) {
-            const L_INDEX = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            sheet[i] = {[L_INDEX[Math.floor(i/sheetCols)] + (i%sheetCols + 1)]: item};
-          });
-          console.log(sheet);
-        } else {
-          parserReport(2);
-        }
-      }
-      else {
-        parserReport(1);
-      }
-    }
-    else parserReport(0);
+    if (!input) return 'Error: input area is empty';
+    var sheetPreParsed = input.split(/\n/g);
+    if (!sheetPreParsed) return 'Error: input area is empty'
+    var sheetSize = sheetPreParsed[0].split(/\t/g);
+    if (sheetSize.length!==2) return 'Error: invalid sheet size format';
+    const colCount = numValid(sheetSize[0]);
+    const rowCount = numValid(sheetSize[1]);
+    if (!rowCount || !colCount) return 'Error: invalid sheet size format';
+    return 'X: ' + colCount + ', Y:' + rowCount;
   }
 
-  function process(table) {
-
+  function calculate(input) {
+    return input;
   }
 
-  function unparse(output) {
-    inoutArea.value = output;
+  function unparse(input) {
+    return input;
   }
+
+  function numValid(number) {
+    if (number.search(/[^\d]/)==-1 && parseInt(number)!=0)
+       return parseInt(number); else return false;
+  }
+
+    // const sheetSizeFormat = /\d+\t\d+\n/,
+    //       anySubstring = '[^\\t\\n]+';
+    //
+    // if (input) {
+    //   if (sheetSizeFormat.test(input)) {
+    //     var sheetCols = input.match(/\d+/g)[0];
+    //     var sheetRows = input.match(/\d+/g)[1];
+    //     // Sheet format dynamic regexp
+    //     var reTemplate = '';
+    //     for (var row=1; row < sheetRows; row++) {
+    //       reTemplate = reTemplate + anySubstring;
+    //       for (var col=1; col < sheetCols; col++) {
+    //         reTemplate = reTemplate + '\\t' + anySubstring;
+    //       }
+    //       reTemplate = reTemplate + '\\n';
+    //     }
+    //     reTemplate = reTemplate + anySubstring;
+    //     for (var col=1; col < sheetCols; col++) {
+    //       reTemplate = reTemplate + '\\t' + anySubstring;
+    //     }
+    //     var sheetFormat = new RegExp(reTemplate);
+    //     console.log(sheetFormat);
+    //
+    //     var sheetPreParsed = input.replace(sheetSizeFormat, '');
+    //     console.log(sheetPreParsed.match(sheetFormat));
+    //     // Declared sheet size validation
+    //     if (sheetPreParsed.match(sheetFormat) == sheetPreParsed.match(sheetFormat).input) {
+    //       sheetPreParsed = sheetPreParsed.split(/\t|\n/g);
+    //       sheetPreParsed.forEach(function(item, i) {
+    //         const L_INDEX = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    //         sheet[i] = {[(L_INDEX[i%sheetCols] + Math.floor(i/sheetRows) + 1)]: item};
+    //       });
+    //       console.log(sheet);
+    //     } else {
+    //       parserReport(2);
+    //     }
+    //   }
+    //   else {
+    //     parserReport(1);
+    //   }
+    // }
+    // else parserReport(0);
 
 })();
 
-function parserReport(errCode) {
-  var report = document.getElementById('report');
-  report.setAttribute('class', 'report-error');
-  switch (errCode) {
-    case 0:
-      report.innerHTML = 'Input area is empty.'
-      break;
-    case 1:
-      report.innerHTML = 'Sheet size syntax error.'
-      break;
-    case 2:
-      report.innerHTML = 'Sheet size doesn\'t match to declared.'
-      break;
-  }
-}
+// function parserReport(errCode) {
+//   var report = document.getElementById('report');
+//   report.setAttribute('class', 'report-error');
+//   switch (errCode) {
+//     case 0:
+//       report.innerHTML = 'Input area is empty.'
+//       break;
+//     case 1:
+//       report.innerHTML = 'Sheet size syntax error.'
+//       break;
+//     case 2:
+//       report.innerHTML = 'Sheet size doesn\'t match to declared.'
+//       break;
+//   }
+// }
 
 // ======== Some textarea magic
 function getCaretPos(input) {

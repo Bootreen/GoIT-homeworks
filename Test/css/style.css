@@ -16,25 +16,3 @@ h1 {
   padding: 2px;
   font: bold 150% Calibri;
 }
-
-.status {
-  margin-top: 6px;
-  font-weight: bold;
-}
-
-#report {
-  font-weight: normal;
-  color: white;
-}
-
-.report-neutral {
-  background-color: navy;
-}
-
-.report-good {
-  background-color: darkgreen;
-}
-
-.report-error {
-  background-color: red;
-}
