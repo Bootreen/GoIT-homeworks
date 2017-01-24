@@ -51,7 +51,11 @@
         // Declared sheet size validation
         if (sheetPreParsed.match(sheetFormat) == sheetPreParsed.match(sheetFormat).input) {
           sheetPreParsed = sheetPreParsed.split(/\t|\n/g);
-          sheet = sheetPreParsed.forEach()
+          sheetPreParsed.forEach(function(item, i, sheetArray) {
+            const L_INDEX = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            sheet[i] = [L_INDEX[Math.floor(i/sheetCols)] + (i%sheetCols + 1), item];
+          });
+          console.log(sheet);
         } else {
           parserReport(2);
         }
