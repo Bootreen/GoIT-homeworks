@@ -46,14 +46,16 @@
           reTemplate = reTemplate + '\\t' + anySubstring;
         }
         var sheetFormat = new RegExp(reTemplate);
+        console.log(sheetFormat);
 
         var sheetPreParsed = input.replace(sheetSizeFormat, '');
+        console.log(sheetPreParsed.match(sheetFormat));
         // Declared sheet size validation
         if (sheetPreParsed.match(sheetFormat) == sheetPreParsed.match(sheetFormat).input) {
           sheetPreParsed = sheetPreParsed.split(/\t|\n/g);
           sheetPreParsed.forEach(function(item, i, sheetArray) {
             const L_INDEX = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            sheet[i] = [L_INDEX[Math.floor(i/sheetCols)] + (i%sheetCols + 1), item];
+            sheet[i] = {[L_INDEX[Math.floor(i/sheetCols)] + (i%sheetCols + 1)]: item};
           });
           console.log(sheet);
         } else {
